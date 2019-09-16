@@ -2,6 +2,7 @@
 $global-font-size: 18px;
 $global-baseline: $global-font-size * 1.8;
 $global-grid-size: 1200px;
+$global-base-unit: 20px;
 
 // Modular Scale for Headlines
 $modularscale: (
@@ -22,8 +23,9 @@ $breakpoints: (
 );
 
 // Color Variables
-$primary: #2ec1b4;
-$secondary: #D95F18;
+$primary: #0060CA;
+$secondary: #FCDC74;
+$bay: #403BC1;
 $black: #232323;
 $white: #ffffff;
 
@@ -50,6 +52,10 @@ $colors: (
 	),
 	white: (
 		base: $white,
+	),
+	bay: (
+		base: $bay,
+		dark: darken($bay, 25%),
 	)
 );
 

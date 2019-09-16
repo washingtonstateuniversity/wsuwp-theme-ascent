@@ -25,7 +25,7 @@ final class WSU_WP_Lodge_Child
 			$wildcardPos = strpos($i, "*");
 
 			if ( $wildcardPos !== false && substr($ip, 0, $wildcardPos) . "*" == $i ) {
-				wp_enqueue_script( 'wsuwp-lodge-child-livereload', 'http://localhost:35729/livereload.js');
+				// wp_enqueue_script( 'wsuwp-lodge-child-livereload', 'http://localhost:35729/livereload.js');
 			}
 		}
 	}

@@ -1,0 +1,17 @@
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: color(bay, base);
+	@include transition();
+
+	&:visited {
+		color: color(bay, dark);
+	}
+
+	&:hover {
+		color: color(secondary, dark);
+	}
+}
