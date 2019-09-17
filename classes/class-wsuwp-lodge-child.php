@@ -31,4 +31,36 @@ final class WSU_WP_Lodge_Child
 			}
 		}
 	}
+
+	/**
+	 * Register Projects Post Type
+	 */
+	static public function register_project_post_type()
+	{
+		$args = array(
+			'public'   => true,
+			'label'    => 'Projects',
+			'supports' => array('title', 'editor', 'thumbnail'),
+			'show_in_rest' => true
+		);
+
+		register_post_type( 'ascent_projects', $args);
+	}
+
+	/**
+	 * Register Project Meta Boxes
+	 */
+	static public function register_project_meta_box()
+	{
+		add_meta_box('ascent-project-details', __( 'Project Details', 'wsuwp-lodge-child'), 'ascent_display_callback', 'ascent_projects', 'side', 'high');
+
+		function ascent_display_callback($post) {
+			echo '
+				<div class="components-base-control__field">
+					<label class="components-base-control__label" for="project-number" style="margin-bottom: 5px; display: block;">Project Number</label>
+					<input val="test" type="text" class="components-text-control__input" placeholder="001" id="project-number" />
+				</div>
+			';
+		}
+	}
 }
