@@ -9,3 +9,9 @@
 @mixin transition($duration: 300ms, $bezier: ease, $element: all){
 	transition: $duration $bezier $element;
 }
+
+// Off-center Align
+@mixin align-off-center() {
+	margin-left: 20vw;
+	margin-right: auto;
+}

@@ -1,12 +1,13 @@
 // Global Variables
-$global-font-size: 18px;
+$global-font-size: 16px;
+$global-font-family: 'Heebo', sans-serif;
 $global-baseline: $global-font-size * 1.8;
 $global-grid-size: 1200px;
 $global-base-unit: 20px;
 
 // Modular Scale for Headlines
 $modularscale: (
-  base: 18px, // match to global var (has to be passed manually for now, sorry)
+  base: 16px, // match to global var (has to be passed manually for now, sorry)
   ratio: 1.25 // ratio you'd like your headlines to scale at (see https://www.modularscale.com/?1&em&1.25)
 );
 

@@ -1,0 +1,32 @@
+.entry-header-featured-image {
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+
+	.wp-post-image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&::after {
+		@include psuedo();
+
+		background-color: color(white);
+		height: 200%;
+		width: 173px;
+		position: absolute;
+		top: -50%;
+		right: -88px;
+		transform: rotate(25deg);
+	}
+}
+
+.entry-title {
+	@include align-off-center();
+
+	max-width: $global-grid-size;
+	margin-top: $global-base-unit * 5;
+	margin-bottom: $global-base-unit;
+}
