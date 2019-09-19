@@ -1,3 +1,3 @@
-# WSU WP Child Theme Lodge
+# WSU WP Ascent Child Theme
 
-The Child theme starter for the lodge parent theme. Utilize this child theme to begin customizing and building unique features for your non-wsu branded website project.
+The child theme built for the Ascent.aero website project.
