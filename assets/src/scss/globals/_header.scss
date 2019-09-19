@@ -1,6 +1,25 @@
+/*--------------------------------------------------------------
+## Site Header Bar
+--------------------------------------------------------------*/
 .site-header {
-	background-color: color(primary, base);
+	background-color: color(white, base);
 	padding: 20px;
+	position: relative;
+}
+
+.site-header.is-active {
+	background-color: color(bay, base);
+
+	.site-header-title a,
+	.hamburger {
+		color: color(white, base);
+	}
+
+	.hamburger .hamburger-inner,
+	.hamburger .hamburger-inner::before,
+	.hamburger .hamburger-inner::after {
+		background: color(white, base);
+	}
 }
 
 .site-header-wrapper {
@@ -11,3 +30,183 @@
 	max-width: $global-grid-size;
 	margin: 0 auto;
 }
+
+.home .site-header-title {
+	opacity: 0;
+}
+
+.site-header-title {
+	text-transform: uppercase;
+	font-family: $global-font-family;
+	font-weight: 700;
+	@include clear-margin('bottom');
+	@include clear-margin('top');
+
+
+	a {
+		color: color(bay, base);
+		text-decoration: none;
+		@include font-size(24px, 1);
+	}
+}
+
+.site-header-title a,
+.hamburger {
+	color: color(bay, base);
+}
+
+.hamburger .hamburger-inner,
+.hamburger .hamburger-inner::before,
+.hamburger .hamburger-inner::after {
+	background: color(bay, base);
+}
+
+.hamburger {
+	display: flex;
+	align-items: center;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.is-active:hover,
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.hamburger-label {
+	font-family: sans-serif;
+	padding-left: 10px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	border-radius: 0;
+	height: 2px;
+}
+
+.hamburger-inner {
+	width: 36px;
+}
+
+.hamburger-inner::after {
+	width: 32px;
+}
+
+.hamburger.is-active {
+	.hamburger-inner,
+	.hamburger-inner::before,
+	.hamburger-inner::after {
+		width: 40px;
+	}
+}
+
+/*--------------------------------------------------------------
+## Menu
+--------------------------------------------------------------*/
+.main-navigation-menu {
+	position: absolute;
+	width: 100%;
+	top: 95px;
+	left: 0;
+	overflow: hidden;
+
+	z-index: z('site-header');
+	background: color(white, base);
+
+	@include transition();
+}
+
+.main-navigation-menu .sub-menu {
+	margin-left: $global-base-unit;
+	overflow: hidden;
+
+	@include transition();
+}
+
+// First Level Menu Items
+.main-navigation-menu .menu-item {
+	margin-left: $global-base-unit * 4;
+	padding: 0;
+
+	text-transform: uppercase;
+	list-style: none;
+}
+
+.main-navigation-menu .menu-item a {
+	text-decoration: none;
+	padding: $global-base-unit 0;
+	position: relative;
+	display: block;
+	width: 100%;
+	color: color(black);
+
+	&:hover {
+		color: initial;
+	}
+
+	&::before,
+	&::after {
+		@include psuedo();
+		position: absolute;
+		left: $global-base-unit * -2;
+		transform: translate(-50%, -50%);
+		width: 50px;
+		height: 2px;
+		background-color: color(bay, base);
+
+		@include transition();
+	}
+
+	&::before {
+		top: calc(50% - 10px);
+	}
+
+	&::after {
+		top: calc(50% + 10px);
+	}
+}
+
+.main-navigation-menu .menu-item a[data-collapsed="true"] {
+	&::before {
+		top: calc(50% - 3px);
+	}
+
+	&::after {
+		top: calc(50% + 3px);
+	}
+}
+
+
+// Second Level+ Menu Items
+.main-navigation-menu .menu-item .menu-item {
+	margin-left: 0;
+	text-transform: initial;
+}
+
+.main-navigation-menu .menu-item .menu-item a {
+	padding: 3px 0;
+	font-weight: 700;
+	color: color(bay, base);
+
+	&:hover {
+		color: initial;
+	}
+
+	&::before,
+	&::after {
+		display: none;
+	}
+}
+
+// Third Level+ Menu Items
+.main-navigation-menu .menu-item .menu-item .menu-item a {
+	font-weight: normal;
+}
+
+@include mq('tablet-wide') {
+
+}
+
