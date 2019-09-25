@@ -1,5 +1,5 @@
 .entry-header-featured-image {
-	height: 400px;
+	height: 250px;
 	overflow: hidden;
 	position: relative;
 
@@ -24,9 +24,15 @@
 }
 
 .entry-title {
-	@include align-off-center();
-
 	max-width: $global-grid-size;
-	margin-top: $global-base-unit * 5;
-	margin-bottom: $global-base-unit;
+	margin: $global-base-unit;
+}
+
+
+@include mq("small") {
+	.entry-title {
+		// @include align-off-center();
+		margin-top: $global-base-unit * 5;
+		margin-bottom: $global-base-unit;
+	}
 }
