@@ -1,0 +1,33 @@
+.post-type-archive-wsuwp_uc_project {
+	.wsuwp_uc_project:last-child {
+		.project-by-number-link {
+			border-bottom: none;
+		}
+	}
+}
+.project-by-number-link {
+	color: color(primary, lighter);
+	text-decoration: none;
+	display: block;
+	border-bottom: 1px solid color(secondary, base);
+	padding-top: $global-base-unit;
+	padding-bottom: $global-base-unit * 2;
+}
+
+.project-by-number-headline {
+	@include font-size(14px);
+	font-weight: normal;
+	text-transform: initial;
+	color: color(bay, base);
+
+	@include clear-margin(top);
+}
+
+.project-by-number-id {
+	@include font-size(24px);
+	font-weight: 700;
+
+	@include clear-margin(top);
+	@include clear-margin(bottom);
+}
+

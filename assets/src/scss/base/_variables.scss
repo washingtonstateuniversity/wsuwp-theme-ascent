@@ -45,13 +45,20 @@ $colors: (
 	),
 	black: (
 		base: $black,
+		light: lighten($black, 15%),
+		lighter: lighten($black, 25%),
+		lightest: lighten($black, 50%),
 	),
 	white: (
 		base: $white,
 	),
 	bay: (
 		base: $bay,
-		dark: darken($bay, 25%),
+		light: lighten($bay, 15%),
+		lighter: lighten($bay, 25%),
+		lightest: lighten($bay, 50%),
+		dark: darken($bay, 15%),
+		trans: transparentize($bay, 0.5)
 	)
 );
 

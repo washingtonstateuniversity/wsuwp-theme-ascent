@@ -1,7 +1,7 @@
 // Add required psuedo element properties
-@mixin psuedo() {
+@mixin psuedo($position: relative) {
 	content: "";
-	position: relative;
+	position: $position;
 	display: block;
 }
 

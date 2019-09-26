@@ -3,11 +3,13 @@
 	overflow: hidden;
 	position: relative;
 
-	.wp-post-image {
+	.wp-post-image,
+	img {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		width: 100%;
 	}
 
 	&::after {
@@ -26,6 +28,8 @@
 .entry-title {
 	max-width: $global-grid-size;
 	margin: $global-base-unit;
+
+	@include align-off-center();
 }
 
 
