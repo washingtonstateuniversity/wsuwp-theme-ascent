@@ -12,19 +12,9 @@
 <header id="masthead" class="site-header">
 	<div class="site-header-wrapper">
 		<div class="site-header-branding">
-
-			<?php
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-header-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-header-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			?>
-
+			<p class="site-header-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?>"><?php WSU_WP_Lodge_Child_Helpers::get_the_logo(); ?></a>
+			</p>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

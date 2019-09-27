@@ -31,8 +31,17 @@
 	margin: 0 auto;
 }
 
-.home .site-header-title {
+.home .site-header-branding {
 	opacity: 0;
+	visibility: hidden;
+}
+
+.is-active .logo-fill-color {
+	fill: color(white, base);
+}
+
+.logo-fill-color {
+	fill: color(bay, base);
 }
 
 .site-header-title {
@@ -42,10 +51,11 @@
 	@include clear-margin('bottom');
 	@include clear-margin('top');
 
-
 	a {
 		color: color(bay, base);
 		text-decoration: none;
+		width: 165px;
+		display: block;
 		@include font-size(24px, 1);
 	}
 }
