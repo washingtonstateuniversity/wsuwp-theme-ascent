@@ -2,8 +2,9 @@
 	background-color: color(white, base);
 	position: relative;
 	overflow: hidden;
-	padding-left: $global-base-unit + 40px;
-	padding-right: $global-base-unit + 40px;
+	padding-left: $global-base-unit * 4;
+	padding-bottom: $global-base-unit * 3;
+	margin-top: $global-base-unit * 4;
 
 	&::after {
 		@include psuedo();
@@ -11,16 +12,16 @@
 		background: color(secondary, base);;
 		height: 200px;
 		width: 400px;
-		bottom: -180px;
+		bottom: -140px;
 		left: -200px;
-		transform: rotate(28deg);
+		transform: rotate(23deg);
 	}
 }
 
 .site-footer-byline {
 	margin-bottom: 0;
 
-	@include font-size(14px, 1.4);
+	// @include font-size(14px, 1.4);
 }
 
 .site-footer-links {
@@ -32,11 +33,8 @@
 	margin-right: $global-base-unit;
 }
 
-.site-footer-link-item a {
-	@include font-size(12px);
-}
-
-
+.site-footer-byline,
+.site-footer-link-item a,
 .site-footer-copyright {
-	@include font-size(12px);
+	@include font-size(14px);
 }

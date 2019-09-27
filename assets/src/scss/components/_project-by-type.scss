@@ -1,0 +1,14 @@
+.page-id-3545 {
+	.entry-content {
+		max-width: $global-grid-size;
+		margin-right: auto;
+		margin-left: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.entry-content .item {
+		padding-right: $global-base-unit * 2;
+		padding-bottom: $global-base-unit * 2;
+	}
+}

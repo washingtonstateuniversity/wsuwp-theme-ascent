@@ -27,9 +27,7 @@
 
 .entry-title {
 	max-width: $global-grid-size;
-	margin: $global-base-unit;
-
-	@include align-off-center();
+	margin: $global-base-unit auto;
 }
 
 

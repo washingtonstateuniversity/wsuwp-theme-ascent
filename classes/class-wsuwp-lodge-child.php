@@ -20,15 +20,19 @@ final class WSU_WP_Lodge_Child
 
 		wp_enqueue_script( 'wsuwp-lodge-child-scripts', get_stylesheet_directory_uri() . '/assets/dist/child-scripts.js', array(), filemtime(get_stylesheet_directory() . '/assets/dist/child-scripts.js'), true );
 
-		$whitelist = array( '127.0.0.1', '::1', '192.168.50.*' );
-		$ip = $_SERVER['REMOTE_ADDR'];
+	}
 
-		foreach($whitelist as $i){
-			$wildcardPos = strpos($i, "*");
+	/**
+	 * Filter Widget Category Args
+	 */
+	static public function widget_categories_args_filter( $cat_args )
+	{
+		// Filter by Topics
+		$cat_args['taxonomy'] = 'wsuwp_uc_topics';
 
-			if ( $wildcardPos !== false && substr($ip, 0, $wildcardPos) . "*" == $i ) {
-				// wp_enqueue_script( 'wsuwp-lodge-child-livereload', 'http://localhost:35729/livereload.js');
-			}
-		}
+		// Exclude Finished Projects
+		$cat_args['exclude'] = '429';
+
+		return $cat_args;
 	}
 }

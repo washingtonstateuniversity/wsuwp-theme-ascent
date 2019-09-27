@@ -1,12 +1,8 @@
 .content-area {
-	// max-width: 750px;
 	margin: 0 auto;
 }
 
 .entry-content {
-	max-width: 750px;
-	// @include align-off-center();
-
 	ul {
 		margin-left: $global-base-unit * 3;
 		margin-top: $global-base-unit * 3;

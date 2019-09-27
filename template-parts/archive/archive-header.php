@@ -17,7 +17,17 @@
 	</div>
 
 	<h1 class="archive-header-heading">
-		<?php echo get_queried_object()->labels->name; ?>
+
+		<?php if ( is_post_type_archive() ) : ?>
+
+			<?php post_type_archive_title(); ?>
+
+		<?php else : ?>
+
+			<?php single_tag_title(); ?>
+
+		<?php endif; ?>
+
 	</h1>
 
 </header><!-- .page-header -->
