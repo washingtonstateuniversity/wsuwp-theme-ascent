@@ -1,6 +1,6 @@
 
-import { collapseSection } from './collapseSection';
-import { expandSection } from './collapseSection';
+import { collapseSection } from './helper-functions';
+import { expandSection } from './helper-functions';
 
 /**
 Set Parent Menu Controls

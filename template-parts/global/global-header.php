@@ -13,7 +13,7 @@
 	<div class="site-header-wrapper">
 		<div class="site-header-branding">
 			<p class="site-header-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?>"><?php WSU_WP_Lodge_Child_Helpers::get_the_logo(); ?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?>"><?php WSU_WP_Lodge_Child_Helpers::get_the_logo('default'); ?></a>
 			</p>
 		</div><!-- .site-branding -->
 

@@ -11,8 +11,15 @@ final class WSU_WP_Lodge_Child_Helpers
 	 *
 	 * @return bool $checked
 	 */
-	static public function get_the_logo()
+	static public function get_the_logo($variant)
 	{
-		include get_stylesheet_directory() . '/assets/src/img/ascent-logo-horz.svg';
+		switch ($variant) {
+			case 'default':
+				include get_stylesheet_directory() . '/assets/src/img/ascent-logo-horz.svg';
+				break;
+			case 'full':
+				include get_stylesheet_directory() . '/assets/src/img/ascent-logo-full-white.svg';
+				break;
+		}
 	}
 }

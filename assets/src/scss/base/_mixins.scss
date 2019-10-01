@@ -1,10 +1,3 @@
-// Add required psuedo element properties
-@mixin psuedo($position: relative) {
-	content: "";
-	position: $position;
-	display: block;
-}
-
 // Create transitions mixin for standardizing animations
 @mixin transition($duration: 300ms, $bezier: ease, $element: all){
 	transition: $duration $bezier $element;

@@ -1,8 +1,30 @@
+// Lists
 ul {
 	margin: 0;
 	padding: 0;
 }
 
+ul li {
+	position: relative;
+	margin-left: $global-base-unit;
+	margin-bottom: $global-base-unit / 4;
+	padding-left: $global-base-unit;
+	list-style: none;
+
+	&::before {
+		@include psuedo(absolute);
+		height: 4px;
+		width: 4px;
+		top: .6em;
+		left: 0;
+		background-color: color(black, base);
+		border-radius: 100%;
+	}
+}
+
+
+
+// Anchors
 a {
 	color: color(bay, base);
 	@include transition();
@@ -16,16 +38,45 @@ a {
 	}
 }
 
+
+
+// Headings
 h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	font-family: $global-font-family;
 	font-weight: 700;
+	color: color(primary, base);
 }
 
 h1 {
-	@include font-size(32px);
+	@include font-size(48.83px);
 }
 
+h2 {
+	@include font-size(39.06px);
+}
+
+h3 {
+	@include font-size(31.25px);
+}
+
+h4 {
+	@include font-size(25px);
+}
+
+h5 {
+	@include font-size(20px);
+}
+
+h6 {
+	@include font-size(16px);
+}
+
+// Paragraphs
 p {
 	@include font-size($global-font-size);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }

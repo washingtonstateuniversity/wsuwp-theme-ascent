@@ -46,3 +46,21 @@ export function expandSection(element) {
 	// mark the section as "currently not collapsed"
 	element.setAttribute('data-collapsed', 'false');
 }
+
+/**
+ * Get Position of Element
+ * @param element
+ */
+
+export function getPosition(element) {
+	var xPosition = 0;
+	var yPosition = 0;
+
+	while (element) {
+		xPosition += element.offsetLeft - element.scrollLeft + element.clientLeft;
+		yPosition += element.offsetTop - element.scrollTop + element.clientTop;
+		element = element.offsetParent;
+	}
+
+	return { x: xPosition, y: yPosition };
+}
