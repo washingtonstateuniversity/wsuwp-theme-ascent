@@ -143,6 +143,10 @@
 
 	text-transform: uppercase;
 	list-style: none;
+
+	&:before {
+		display: none;
+	}
 }
 
 .main-navigation-menu .menu-item a {
