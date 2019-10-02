@@ -31,6 +31,12 @@
 
 .site-footer-link-item {
 	margin-right: $global-base-unit;
+	@include clear-margin(left);
+	@include clear-padding(left);
+
+	&:before {
+		display: none;
+	}
 }
 
 .site-footer-byline,

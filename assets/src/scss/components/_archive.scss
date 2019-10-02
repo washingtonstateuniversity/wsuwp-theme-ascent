@@ -49,6 +49,8 @@
 			border: 1px solid color(secondary, base);
 			height: 15px;
 			width: 15px;
+			border-radius: 0;
+			background-color: transparent;
 		}
 
 		&::after {
