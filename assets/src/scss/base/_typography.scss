@@ -26,7 +26,8 @@ ul li {
 
 // Anchors
 a {
-	color: color(bay, base);
+	color: color(bay, dark);
+	text-decoration: none;
 	@include transition();
 
 	&:visited {

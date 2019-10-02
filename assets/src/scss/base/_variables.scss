@@ -32,15 +32,15 @@ $colors: (
 		light: lighten($primary, 15%),
 		lighter: lighten($primary, 25%),
 		lightest: lighten($primary, 50%),
-		dark: darken($primary, 15%),
+		dark: darken($primary, 20%),
 		trans: transparentize($primary, 0.5)
 	),
 	secondary: (
 		base: $secondary,
 		light: lighten($secondary, 15%),
-		lighter: lighten($secondary, 25%),
+		lighter: lighten($secondary, 35%),
 		lightest: lighten($secondary, 50%),
-		dark: darken($secondary, 15%),
+		dark: darken($secondary, 20%),
 		trans: transparentize($secondary, 0.5)
 	),
 	black: (

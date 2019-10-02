@@ -82,10 +82,17 @@ get_header();
 
 				<?php foreach( $recent_posts as $recent ) : ?>
 
-					<a href="<?php echo get_permalink($recent['ID']);?>">
-						<h3 class="home-recent-news-title"><?php echo $recent['post_title']; ?></h3>
-					</a>
-					<?php echo $recent['post_content']; ?>
+					<article class="home-recent-news-item">
+
+						<?php $post = $recent['ID']; ?>
+
+						<h3 class="home-recent-news-item--title">
+							<a class="home-recent-news-item--link" href="<?php echo get_permalink($post);?>"><?php echo get_the_title($post); ?></a>
+						</h3>
+
+						<p><?php echo get_the_excerpt($post); ?></p>
+
+					</article>
 
 				<?php endforeach; ?>
 
