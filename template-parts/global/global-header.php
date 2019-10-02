@@ -30,14 +30,17 @@
 				</span>
 				<span class="hamburger-label">Menu</span>
 			</button>
+
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'primary-nav',
 				'menu_id'        => 'primary-nav',
 				'menu_class'     => 'main-navigation-menu',
-				'container'      => ''
+				'container'      => '',
 			) );
 			?>
+
+
 		</nav><!-- #site-navigation -->
 	</div>
 </header><!-- #masthead -->

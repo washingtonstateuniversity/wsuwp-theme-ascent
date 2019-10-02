@@ -1,6 +1,9 @@
 
 import { collapseSection } from './helper-functions';
 import { expandSection } from './helper-functions';
+import { isScreenSizeLarge } from './helper-functions';
+import { showCollapsedMenuItems } from './helper-functions';
+import { hideCollapsedMenuItems } from './helper-functions';
 
 /**
 Set Parent Menu Controls
@@ -59,34 +62,28 @@ menuButton[0].addEventListener('click', function (e) {
 	}
 });
 
-
-
-
 /**
-Show/Hide Items
-*/
-
-// Show / Hide Menu Bar
-// navButton.addEventListener('click', function () {
-// 	if (this.classList.contains('is-active')) {
-// 		this.classList.remove('is-active');
-// 		masthead.classList.remove('is-active');
-// 	} else {
-// 		this.classList.add('is-active');
-// 		masthead.classList.add('is-active');
-// 	}
-// });
+ * Show Collapsed Data on Desktop
+ *
+ */
+// On browser width change
 
 
+window.addEventListener('resize', function () {
 
-// parentMenuItem.addEventListener('click', function (e) {
-// 	var section = document.querySelector('.section.collapsible');
-// 	var isCollapsed = section.getAttribute('data-collapsed') === 'true';
+	window.setTimeout(function () {
+		console.log("fired");
 
-// 	if (isCollapsed) {
-// 		expandSection(section)
-// 		section.setAttribute('data-collapsed', 'false')
-// 	} else {
-// 		collapseSection(section)
-// 	}
-// });
+		if (isScreenSizeLarge()) {
+			showCollapsedMenuItems();
+		} else {
+			hideCollapsedMenuItems();
+		}
+
+	}, 500);
+});
+
+// Init
+if (isScreenSizeLarge()) {
+	showCollapsedMenuItems();
+}

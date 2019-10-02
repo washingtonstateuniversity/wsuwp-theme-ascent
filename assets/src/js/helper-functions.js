@@ -37,10 +37,11 @@ export function expandSection(element) {
 	// when the next css transition finishes (which should be the one we just triggered)
 	element.addEventListener('transitionend', function (e) {
 		// remove this event listener so it only gets triggered once
-		// element.removeEventListener('transitionend', arguments.callee);
+		element.removeEventListener('transitionend', e.callee);
 
 		// remove "height" from the element's inline styles, so it can return to its initial value
 		element.style.height = null;
+
 	});
 
 	// mark the section as "currently not collapsed"
@@ -63,4 +64,40 @@ export function getPosition(element) {
 	}
 
 	return { x: xPosition, y: yPosition };
+}
+
+/**
+ * Check if browser is large!
+ */
+export function isScreenSizeLarge() {
+	var thisIsLarge = 1440;
+	var windowWidth = window.innerWidth;
+
+	if (windowWidth >= thisIsLarge) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
+ * Show Collapsed Menu Items
+ */
+export function showCollapsedMenuItems() {
+	var menuItemAnchors = document.querySelectorAll('.menu-item > [data-collapsed="true"]');
+
+	menuItemAnchors.forEach(element => {
+		element.setAttribute('data-collapsed', 'false');
+	});
+}
+
+/**
+ * Hide Collapsed Menu Items
+ */
+export function hideCollapsedMenuItems() {
+	var menuItemAnchors = document.querySelectorAll('.menu-item > [data-collapsed="false"]');
+
+	menuItemAnchors.forEach(element => {
+		element.setAttribute('data-collapsed', 'true');
+	});
 }

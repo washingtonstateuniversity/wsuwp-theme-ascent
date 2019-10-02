@@ -1,0 +1,155 @@
+.main-navigation-button {
+	&:hover {
+		background-color: transparent;
+	}
+}
+
+.main-navigation-menu {
+	position: absolute;
+	width: 100%;
+	max-width: $global-grid-size;
+	top: 95px;
+	left: 50%;
+	overflow: hidden;
+	transform: translateX(-50%);
+
+	z-index: z('site-header');
+	background: color(white, base);
+
+	@include transition();
+
+	&[data-collapsed="false"] {
+		border-bottom: 2px solid color(secondary, base);
+	}
+
+	&::after {
+		content: "X";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: color(primary, lightest);
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		margin-left: 5px;
+	}
+}
+
+.main-navigation-menu .sub-menu {
+	margin-left: $global-base-unit;
+	overflow: hidden;
+
+	@include transition();
+}
+
+// First Level Menu Items
+.main-navigation-menu .menu-item {
+	margin-left: $global-base-unit * 4;
+	padding: 0;
+
+	text-transform: uppercase;
+	list-style: none;
+
+	&:before {
+		display: none;
+	}
+}
+
+.main-navigation-menu .menu-item a {
+	text-decoration: none;
+	padding: $global-base-unit 0;
+	position: relative;
+	display: block;
+	width: 100%;
+	color: color(black);
+
+	&:hover {
+		color: initial;
+	}
+
+	&::before,
+	&::after {
+		@include psuedo();
+		position: absolute;
+		left: $global-base-unit * -2;
+		transform: translate(-50%, -50%);
+		width: 50px;
+		height: 2px;
+		background-color: color(bay, base);
+
+		@include transition();
+	}
+
+	&::before {
+		top: calc(50% - 10px);
+	}
+
+	&::after {
+		top: calc(50% + 10px);
+	}
+}
+
+.main-navigation-menu .menu-item a[data-collapsed="true"] {
+	&::before {
+		top: calc(50% - 3px);
+	}
+
+	&::after {
+		top: calc(50% + 3px);
+	}
+}
+
+
+// Second Level+ Menu Items
+.main-navigation-menu .menu-item .menu-item {
+	margin-left: 0;
+	text-transform: initial;
+}
+
+.main-navigation-menu .menu-item .menu-item a {
+	padding: 3px 0;
+	font-weight: 700;
+	color: color(bay, base);
+
+	&:hover {
+		color: initial;
+	}
+
+	&::before,
+	&::after {
+		display: none;
+	}
+}
+
+// Third Level+ Menu Items
+.main-navigation-menu .menu-item .menu-item .menu-item a {
+	font-weight: normal;
+}
+
+@include mq('small') {
+
+}
+
+@include mq('large') {
+	.main-navigation-menu {
+		display: flex;
+		justify-content: space-between;
+		padding-right: $global-base-unit * 4;
+		padding-left: $global-base-unit * 4;
+	}
+
+	.main-navigation-menu .menu-item {
+		width: 20%;
+		@include clear-margin('left');
+
+		&:first-child {
+			width: 40%;
+		}
+	}
+
+	.main-navigation-menu .menu-item a::before,
+	.main-navigation-menu .menu-item a::after {
+		display: none;
+	}
+}

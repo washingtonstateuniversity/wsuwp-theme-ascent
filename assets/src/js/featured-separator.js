@@ -1,18 +1,12 @@
 import { getPosition } from './helper-functions';
 
-var timer;
-
 window.addEventListener('scroll', function () {
-	if (timer) {
-		window.clearTimeout(timer);
-	}
 
-	var timer = window.setTimeout(function () {
+	window.setTimeout(function () {
 		var bars = document.querySelectorAll(".white-bars > div");
 		var windowVertOffset = window.scrollY;
 
 		bars.forEach(function (element, index) {
-
 			var thisBarPosition = getPosition(element);
 			var thisBarPositionY = thisBarPosition["y"];
 			var thisBarWindowDiff = thisBarPositionY - windowVertOffset;
@@ -25,6 +19,6 @@ window.addEventListener('scroll', function () {
 				var marginLeftValue = (index * 15) * -1;
 				element.style.marginLeft = marginLeftValue + "px";
 			}
-		})
-	}, 5);
+		});
+	}, 70);
 });
