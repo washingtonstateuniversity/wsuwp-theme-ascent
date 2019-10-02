@@ -1,0 +1,71 @@
+.error-404 {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-image: url('https://s3.wp.wsu.edu/uploads/sites/192/2019/10/jose-murillo-ibLYvCmyUzI-unsplash-2k.jpg');
+	background-size: cover;
+	height: calc(100vh - 354px);
+	padding-top: $global-base-unit * 4;
+	background-position: center;
+}
+
+.admin-bar .error-404 {
+	height: calc(100vh - 386px);
+}
+
+.error-404 .page-content {
+	background-color: rgba(color(white, base), 0.75);
+	padding: $global-base-unit $global-base-unit * 2;
+
+	@include transition();
+}
+
+.error-404 .page-title {
+	@include font-size($h4);
+	@include gutter();
+}
+
+.error-404 .page-content p {
+	@include font-size(14px);
+	@include clear-margin(top);
+}
+
+.error-404 .search-form .search-field {
+	width: 100%;
+	max-width: 350px;
+	border: none;
+	background-color: transparent;
+	border-radius: 0;
+	border-bottom: 2px solid color(black, lighter);
+}
+
+
+
+
+
+// Media Queries
+// Detect Height for overlay
+@media screen and ( min-height: 950px ) {
+	.error-404 .page-content {
+		background-color: transparent;
+		@include clear-margin(top);
+	}
+}
+
+// Small
+@include mq('small') {
+	.error-404 .page-title {
+		@include font-size($h2);
+	}
+
+	.error-404 .page-content {
+		text-align: center;
+	}
+}
+
+// Medium
+@include mq('medium') {
+	.error-404 .page-title {
+		@include font-size($h1);
+	}
+}
