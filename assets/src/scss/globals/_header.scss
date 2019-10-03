@@ -2,9 +2,11 @@
 ## Site Header Bar
 --------------------------------------------------------------*/
 .site-header {
-	background-color: color(white, base);
-	padding: 20px;
 	position: relative;
+
+	padding: 20px;
+
+	background-color: color(white, base);
 }
 
 .site-header.is-active {
@@ -24,16 +26,18 @@
 
 .site-header-wrapper {
 	display: flex;
+	align-items: center;
 	flex-flow: row;
 	justify-content: space-between;
-	align-items: center;
+
 	max-width: $global-grid-size;
 	margin: 0 auto;
 }
 
 .home .site-header-branding {
-	opacity: 0;
 	visibility: hidden;
+
+	opacity: 0;
 }
 
 .is-active .logo-fill-color {
@@ -45,17 +49,22 @@
 }
 
 .site-header-title {
-	text-transform: uppercase;
 	font-family: $global-font-family;
 	font-weight: 700;
+
+	text-transform: uppercase;
+
 	@include clear-margin('bottom');
 	@include clear-margin('top');
 
 	a {
-		color: color(bay, base);
-		text-decoration: none;
-		width: 165px;
 		display: block;
+
+		width: 165px;
+
+		text-decoration: none;
+
+		color: color(bay, base);
 	}
 }
 
@@ -86,14 +95,16 @@
 
 .hamburger-label {
 	font-family: sans-serif;
+
 	padding-left: 10px;
 }
 
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-	border-radius: 0;
 	height: 2px;
+
+	border-radius: 0;
 }
 
 .hamburger-inner {

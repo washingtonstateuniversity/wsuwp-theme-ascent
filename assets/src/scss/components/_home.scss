@@ -8,9 +8,10 @@
 }
 
 .home-page-header .home-logo-container svg {
-	max-width: 200px;
 	position: relative;
 	z-index: z('page-wrapper');
+
+	max-width: 200px;
 	padding: 120px 0 160px;
 }
 
@@ -30,25 +31,23 @@
 .home-site-main {
 	@include column(12);
 	@include mq('medium') {
-		padding-left: $global-base-unit * 2;
 		padding-right: $global-base-unit * 2;
+		padding-left: $global-base-unit * 2;
 
 		@include column(10);
 	}
-
 	@include mq('large') {
-		padding-left: $global-base-unit * 4;
 		padding-right: $global-base-unit * 4;
+		padding-left: $global-base-unit * 4;
 	}
 }
 
 .home-sidebar-primary {
-	margin-left: $global-base-unit * 2;
 	margin-top: $global-base-unit * 4;
+	margin-left: $global-base-unit * 2;
 
 	@include column(12);
 	@include border-gradient();
-
 	@include mq('medium') {
 		@include column(2);
 	}
@@ -57,10 +56,11 @@
 
 // Separator
 .home-page-featured-separator {
-	background-size: cover;
-	background-position: center;
 	width: 100%;
 	height: 500px;
+
+	background-position: center;
+	background-size: cover;
 
 	.white-bars {
 		position: relative;
@@ -68,12 +68,15 @@
 	}
 
 	.bar {
-		background: white;
-		height: 15px;
-		width: 135px;
 		display: block;
+
+		width: 135px;
+		height: 15px;
 		margin-bottom: 10px;
+
 		transition: 300ms ease margin-left;
+
+		background: white;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -107,25 +110,29 @@
 	margin-top: $global-base-unit * 4;
 
 	@include mq('large') {
-		@include column(10);
-		padding-left: $global-base-unit * 6;
 		padding-right: $global-base-unit * 6;
+		padding-left: $global-base-unit * 6;
+
+		@include column(10);
 	}
 }
 
 .home-recent-news-item {
-	padding-bottom: $global-base-unit * 4;
 	margin-bottom: $global-base-unit * 4;
+	padding-bottom: $global-base-unit * 4;
+
 	border-bottom: 2px solid color(secondary, base);
 
 	&:last-child {
-		border-bottom: none;
 		margin-bottom: 0;
+
+		border-bottom: none;
 	}
 }
 
 .home-recent-news-item--link {
 	text-decoration: none;
+
 	color: color(primary, base);
 
 	&:visited {
@@ -138,10 +145,11 @@
 }
 
 .home-sidebar-secondary {
+	margin-top: $global-base-unit * 4;
+	margin-left: $global-base-unit * 2;
+
 	@include column(2);
 	@include border-gradient();
-	margin-left: $global-base-unit * 2;
-	margin-top: $global-base-unit * 4;
 }
 
 

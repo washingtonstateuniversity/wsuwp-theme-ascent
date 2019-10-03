@@ -1,20 +1,27 @@
 .site-footer-container {
-	background-color: color(white, base);
 	position: relative;
+
 	overflow: hidden;
-	padding-left: $global-base-unit * 4;
-	padding-bottom: $global-base-unit * 3;
+
 	margin-top: $global-base-unit * 4;
+	padding-bottom: $global-base-unit * 3;
+	padding-left: $global-base-unit * 4;
+
+	background-color: color(white, base);
 
 	&::after {
-		@include psuedo();
 		position: absolute;
-		background: color(secondary, base);;
-		height: 200px;
-		width: 400px;
 		bottom: -140px;
 		left: -200px;
+
+		width: 400px;
+		height: 200px;
+
 		transform: rotate(23deg);
+
+		background: color(secondary, base);
+
+		@include psuedo();;
 	}
 }
 
@@ -25,12 +32,14 @@
 }
 
 .site-footer-links {
-	list-style: none;
 	display: flex;
+
+	list-style: none;
 }
 
 .site-footer-link-item {
 	margin-right: $global-base-unit;
+
 	@include clear-margin(left);
 	@include clear-padding(left);
 

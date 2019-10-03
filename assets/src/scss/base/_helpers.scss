@@ -3,6 +3,8 @@
 //-----------------------------------------
 [data-collapsed="true"] + * {
 	overflow: hidden;
-	transition: height 300ms ease-out;
+
 	height: 0;
+
+	transition: height 300ms ease-out;
 }

@@ -1,5 +1,6 @@
 .archive-content-wrapper {
 	display: flex;
+
 	max-width: $global-grid-size;
 	margin: 0 auto;
 }
@@ -23,6 +24,7 @@
 
 	.widget-area .widget-title {
 		margin-bottom: $global-base-unit;
+
 		color: color(primary, lighter);
 	}
 
@@ -31,33 +33,40 @@
 	}
 
 	.widget-area ul li {
-		list-style: none;
 		position: relative;
+
 		margin-bottom: $global-base-unit / 6;
 		padding-left: $global-base-unit / 2;
 
+		list-style: none;
+
 		&::before,
 		&::after {
-			@include psuedo(absolute);
 			top: 50%;
 			left: -20px;
+
 			transform: translateY(-50%);
+
+			@include psuedo(absolute);
 		}
 
 		&::before {
-			border: 1px solid color(secondary, base);
-			height: 15px;
 			width: 15px;
+			height: 15px;
+
+			border: 1px solid color(secondary, base);
 			border-radius: 0;
 			background-color: transparent;
 		}
 
 		&::after {
+			left: -16px;
+
 			width: 8px;
 			height: 8px;
+
 			border-radius: 100%;
 			background-color: color(black, light);
-			left: -16px;
 		}
 
 		&:last-child {

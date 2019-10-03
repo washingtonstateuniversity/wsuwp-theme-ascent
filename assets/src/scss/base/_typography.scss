@@ -1,6 +1,7 @@
 body {
-	@include ms-respond(font-size, 0);
 	line-height: 1.6;
+
+	@include ms-respond(font-size, 0);
 }
 
 // Lists
@@ -11,19 +12,24 @@ ul {
 
 ul li {
 	position: relative;
-	margin-left: $global-base-unit;
+
 	margin-bottom: $global-base-unit / 4;
+	margin-left: $global-base-unit;
 	padding-left: $global-base-unit;
+
 	list-style: none;
 
 	&::before {
-		@include psuedo(absolute);
-		height: 4px;
-		width: 4px;
 		top: .6em;
 		left: 0;
-		background-color: color(black, base);
+
+		width: 4px;
+		height: 4px;
+
 		border-radius: 100%;
+		background-color: color(black, base);
+
+		@include psuedo(absolute);
 	}
 }
 
@@ -31,8 +37,10 @@ ul li {
 
 // Anchors
 a {
-	color: color(bay, dark);
 	text-decoration: none;
+
+	color: color(bay, dark);
+
 	@include transition();
 
 	&:visited {
@@ -48,9 +56,11 @@ a {
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
-	text-transform: uppercase;
 	font-family: $global-font-family;
 	font-weight: 700;
+
+	text-transform: uppercase;
+
 	color: color(primary, base);
 }
 

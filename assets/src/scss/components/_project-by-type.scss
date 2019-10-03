@@ -1,9 +1,11 @@
 .page-id-3545 {
 	.entry-content {
+		display: grid;
+
 		max-width: $global-grid-size;
 		margin-right: auto;
 		margin-left: auto;
-		display: grid;
+
 		grid-template-columns: 1fr 1fr;
 	}
 

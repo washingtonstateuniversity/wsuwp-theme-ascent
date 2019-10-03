@@ -6,17 +6,22 @@
 	}
 }
 .project-by-number-link {
-	color: color(primary, lighter);
-	text-decoration: none;
 	display: block;
-	border-bottom: 1px solid color(secondary, base);
+
 	padding-top: $global-base-unit;
 	padding-bottom: $global-base-unit * 2;
+
+	text-decoration: none;
+
+	color: color(primary, lighter);
+	border-bottom: 1px solid color(secondary, base);
 }
 
 .project-by-number-headline {
 	font-weight: normal;
+
 	text-transform: initial;
+
 	color: color(bay, base);
 
 	@include clear-margin(top);

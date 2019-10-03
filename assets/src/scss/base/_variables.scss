@@ -25,11 +25,11 @@ $h5: 20px;
 $h6: 16px;
 
 // Color Variables
-$primary: #0060CA;
-$secondary: #FCDC74;
-$bay: #403BC1;
+$primary: #0060ca;
+$secondary: #fcdc74;
+$bay: #403bc1;
 $black: #232323;
-$white: #ffffff;
+$white: #fff;
 
 // Color Map for Mixin
 $colors: (
@@ -39,7 +39,7 @@ $colors: (
 		lighter: lighten($primary, 25%),
 		lightest: lighten($primary, 50%),
 		dark: darken($primary, 20%),
-		trans: transparentize($primary, 0.5)
+		trans: transparentize($primary, .5)
 	),
 	secondary: (
 		base: $secondary,
@@ -47,7 +47,7 @@ $colors: (
 		lighter: lighten($secondary, 35%),
 		lightest: lighten($secondary, 50%),
 		dark: darken($secondary, 20%),
-		trans: transparentize($secondary, 0.5)
+		trans: transparentize($secondary, .5)
 	),
 	black: (
 		base: $black,
@@ -64,8 +64,6 @@ $colors: (
 		lighter: lighten($bay, 25%),
 		lightest: lighten($bay, 50%),
 		dark: darken($bay, 15%),
-		trans: transparentize($bay, 0.5)
+		trans: transparentize($bay, .5)
 	)
 );
-
-

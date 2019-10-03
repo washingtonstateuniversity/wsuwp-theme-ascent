@@ -3,21 +3,24 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+	margin-top: $global-base-unit;
 	padding-top: $global-base-unit / 4;
+	padding-right: 30px;
 	padding-bottom: $global-base-unit / 4;
 	padding-left: 30px;
-	padding-right: 30px;
+
+	text-transform: uppercase;
+
 	border: 0;
 	border-radius: 0;
-	background: color(primary, trans);
-	text-transform: uppercase;
 	border-radius: 25px;
-	margin-top: $global-base-unit;
+	background: color(primary, trans);
 
 	@include transition();
 
 	&:hover {
 		cursor: pointer;
+
 		background-color: color(secondary, base);
 	}
 }

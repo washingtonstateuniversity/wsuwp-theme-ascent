@@ -2,11 +2,13 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	background-image: url('https://s3.wp.wsu.edu/uploads/sites/192/2019/10/jose-murillo-ibLYvCmyUzI-unsplash-2k.jpg');
-	background-size: cover;
+
 	height: calc(100vh - 354px);
 	padding-top: $global-base-unit * 4;
+
+	background-image: url('https://s3.wp.wsu.edu/uploads/sites/192/2019/10/jose-murillo-ibLYvCmyUzI-unsplash-2k.jpg');
 	background-position: center;
+	background-size: cover;
 }
 
 .admin-bar .error-404 {
@@ -14,8 +16,9 @@
 }
 
 .error-404 .page-content {
-	background-color: rgba(color(white, base), 0.75);
 	padding: $global-base-unit $global-base-unit * 2;
+
+	background-color: rgba(color(white, base), 0.75);
 
 	@include transition();
 }
@@ -31,10 +34,11 @@
 .error-404 .search-form .search-field {
 	width: 100%;
 	max-width: 350px;
+
 	border: none;
-	background-color: transparent;
-	border-radius: 0;
 	border-bottom: 2px solid color(black, lighter);
+	border-radius: 0;
+	background-color: transparent;
 }
 
 
@@ -46,6 +50,7 @@
 @media screen and ( min-height: 950px ) {
 	.error-404 .page-content {
 		background-color: transparent;
+
 		@include clear-margin(top);
 	}
 }
