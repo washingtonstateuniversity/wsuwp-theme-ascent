@@ -21,19 +21,6 @@
 	&[data-collapsed="false"] {
 		border-bottom: 2px solid color(secondary, base);
 	}
-
-	&::after {
-		content: "X";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		background-color: color(primary, lightest);
-		width: 40px;
-		height: 40px;
-		text-align: center;
-		line-height: 40px;
-		margin-left: 5px;
-	}
 }
 
 .main-navigation-menu .sub-menu {
@@ -127,6 +114,27 @@
 	font-weight: normal;
 }
 
+// Close button
+.main-navigation-menu--close {
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	background-color: color(primary, lightest);
+	position: absolute;
+	bottom: 0;
+	left: 5px;
+	text-align: center;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+
+
+
+
+// Media Queries
 @include mq('small') {
 
 }

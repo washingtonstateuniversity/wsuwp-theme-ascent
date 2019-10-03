@@ -33,7 +33,7 @@ parentMenuItem.forEach(element => {
 			expandSection(subMenu);
 			element.setAttribute('data-collapsed', 'false');
 		} else {
-			collapseSection(subMenu)
+			collapseSection(subMenu);
 			element.setAttribute('data-collapsed', 'true');
 		}
 	})
@@ -67,12 +67,9 @@ menuButton[0].addEventListener('click', function (e) {
  *
  */
 // On browser width change
-
-
 window.addEventListener('resize', function () {
 
 	window.setTimeout(function () {
-		console.log("fired");
 
 		if (isScreenSizeLarge()) {
 			showCollapsedMenuItems();
@@ -83,7 +80,28 @@ window.addEventListener('resize', function () {
 	}, 500);
 });
 
-// Init
+// On browser init
 if (isScreenSizeLarge()) {
 	showCollapsedMenuItems();
 }
+
+/**
+ * Close Main Navigation
+ */
+document.querySelector('#closeMenu').addEventListener('click', function (e) {
+	e.preventDefault();
+
+	// Reset Main Navigation Button
+	var mainNavButton = document.querySelector('.main-navigation-button');
+	mainNavButton.setAttribute('data-collapsed', 'true');
+	mainNavButton.classList.remove('is-active');
+
+	// Reset Masthead
+	var mastHead = document.querySelector('#masthead');
+	mastHead.classList.remove('is-active');
+
+	// Collapse Navigation
+	var primaryNav = document.querySelector('.main-navigation-menu');
+	collapseSection(primaryNav);
+
+});

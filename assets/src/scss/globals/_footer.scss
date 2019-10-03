@@ -42,5 +42,5 @@
 .site-footer-byline,
 .site-footer-link-item a,
 .site-footer-copyright {
-	@include font-size(14px);
+	@include ms-respond(font-size, 0);
 }

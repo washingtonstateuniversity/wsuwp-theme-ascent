@@ -22,7 +22,6 @@
 	}
 
 	.widget-area .widget-title {
-		@include font-size(15px);
 		margin-bottom: $global-base-unit;
 		color: color(primary, lighter);
 	}
@@ -67,7 +66,6 @@
 	}
 
 	.widget-area ul li a {
-		@include font-size(14px);
 		text-decoration: none;
 	}
 }

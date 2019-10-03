@@ -21,12 +21,10 @@
 }
 
 .error-404 .page-title {
-	@include font-size($h4);
 	@include gutter();
 }
 
 .error-404 .page-content p {
-	@include font-size(14px);
 	@include clear-margin(top);
 }
 
@@ -54,18 +52,7 @@
 
 // Small
 @include mq('small') {
-	.error-404 .page-title {
-		@include font-size($h2);
-	}
-
 	.error-404 .page-content {
 		text-align: center;
-	}
-}
-
-// Medium
-@include mq('medium') {
-	.error-404 .page-title {
-		@include font-size($h1);
 	}
 }

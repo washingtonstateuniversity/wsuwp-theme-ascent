@@ -15,18 +15,18 @@
 }
 
 .project-by-number-headline {
-	@include font-size(14px);
 	font-weight: normal;
 	text-transform: initial;
 	color: color(bay, base);
 
 	@include clear-margin(top);
+	@include ms-respond(font-size, 0);
 }
 
 .project-by-number-id {
-	@include font-size(24px);
 	font-weight: 700;
 
+	@include ms-respond(font-size, 2);
 	@include clear-margin(top);
 	@include clear-margin(bottom);
 }

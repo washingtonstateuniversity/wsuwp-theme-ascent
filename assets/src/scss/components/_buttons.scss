@@ -15,7 +15,6 @@ input[type="submit"] {
 	margin-top: $global-base-unit;
 
 	@include transition();
-	@include font-size(14px);
 
 	&:hover {
 		cursor: pointer;
