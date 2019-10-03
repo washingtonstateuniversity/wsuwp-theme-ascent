@@ -91,6 +91,8 @@ if (isScreenSizeLarge()) {
 document.querySelector('#closeMenu').addEventListener('click', function (e) {
 	e.preventDefault();
 
+	// debugger
+
 	// Reset Main Navigation Button
 	var mainNavButton = document.querySelector('.main-navigation-button');
 	mainNavButton.setAttribute('data-collapsed', 'true');
@@ -102,6 +104,6 @@ document.querySelector('#closeMenu').addEventListener('click', function (e) {
 
 	// Collapse Navigation
 	var primaryNav = document.querySelector('.main-navigation-menu');
-	collapseSection(primaryNav);
 
+	collapseSection(primaryNav);
 });

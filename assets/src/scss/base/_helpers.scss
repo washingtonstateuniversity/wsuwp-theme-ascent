@@ -2,9 +2,9 @@
 // Set All elements following a data-collapsed attr
 //-----------------------------------------
 [data-collapsed="true"] + * {
-	overflow: hidden;
-
 	height: 0;
+}
 
-	transition: height 300ms ease-out;
+[data-collapsed="false"] + * {
+	height: initial;
 }
