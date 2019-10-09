@@ -35,7 +35,7 @@
 	@include transition();
 }
 
-// First Level Menu Items
+// First Level Menu Items (Research/Partners/Resources/Etc)
 .main-navigation-menu .menu-item {
 	margin-left: $global-base-unit * 4;
 	padding: 0;
@@ -101,7 +101,7 @@
 }
 
 
-// Second Level+ Menu Items
+// Second Level+ Menu Items (Projects/Universities/etc)
 .main-navigation-menu .menu-item .menu-item {
 	margin-left: 0;
 

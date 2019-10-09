@@ -107,3 +107,11 @@ document.querySelector('#closeMenu').addEventListener('click', function (e) {
 
 	collapseSection(primaryNav);
 });
+
+
+/**
+ * Set Class if three levels deep
+ */
+var wearedeep = document.querySelectorAll('.menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu');
+
+console.log(wearedeep);
