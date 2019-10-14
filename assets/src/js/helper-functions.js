@@ -63,11 +63,12 @@ export function getPosition(element) {
 /**
  * Check if browser is large!
  */
-export function isScreenSizeLarge() {
-	var thisIsLarge = 1440;
+export function isScreenSizeMedium() {
+	// Set Pixel Width for Breakpoint
+	var thisIsMedium = 1024;
 	var windowWidth = window.innerWidth;
 
-	if (windowWidth >= thisIsLarge) {
+	if (windowWidth >= thisIsMedium) {
 		return true;
 	} else {
 		return false;

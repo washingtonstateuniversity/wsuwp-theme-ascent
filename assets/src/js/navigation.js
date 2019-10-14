@@ -1,7 +1,7 @@
 
 import { collapseSection } from './helper-functions';
 import { expandSection } from './helper-functions';
-import { isScreenSizeLarge } from './helper-functions';
+import { isScreenSizeMedium } from './helper-functions';
 import { showCollapsedMenuItems } from './helper-functions';
 import { hideCollapsedMenuItems } from './helper-functions';
 
@@ -71,7 +71,7 @@ window.addEventListener('resize', function () {
 
 	window.setTimeout(function () {
 
-		if (isScreenSizeLarge()) {
+		if (isScreenSizeMedium()) {
 			showCollapsedMenuItems();
 		} else {
 			hideCollapsedMenuItems();
@@ -81,7 +81,7 @@ window.addEventListener('resize', function () {
 });
 
 // On browser init
-if (isScreenSizeLarge()) {
+if (isScreenSizeMedium()) {
 	showCollapsedMenuItems();
 }
 
@@ -112,6 +112,8 @@ document.querySelector('#closeMenu').addEventListener('click', function (e) {
 /**
  * Set Class if three levels deep
  */
-var wearedeep = document.querySelectorAll('.menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu');
+// var subMenu = document.querySelectorAll('.menu-item-has-children > .sub-menu');
 
-console.log(wearedeep);
+// if
+
+// console.log(wearedeep);

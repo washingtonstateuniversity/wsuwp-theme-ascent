@@ -1,3 +1,8 @@
+
+/*=============================================
+=            Main Navigation            =
+=============================================*/
+
 .main-navigation-button {
 	&:hover {
 		background-color: transparent;
@@ -14,7 +19,6 @@
 
 	width: 100%;
 	max-width: $global-grid-size;
-	// padding-bottom: $global-base-unit * 2;
 
 	transform: translateX(-50%);
 
@@ -35,8 +39,11 @@
 	@include transition();
 }
 
-// First Level Menu Items (Research/Partners/Resources/Etc)
+
+/*----------  First Level Menu Items (Research/Partners/Resources/Etc)  ----------*/
 .main-navigation-menu .menu-item {
+	flex: 1 1 auto;
+
 	margin-left: $global-base-unit * 4;
 	padding: 0;
 
@@ -65,9 +72,8 @@
 		color: initial;
 	}
 
-	&::before
-	, &::after {
-		position: absolute;
+	&::before,
+	&::after {
 		left: $global-base-unit * -2;
 
 		width: 50px;
@@ -77,7 +83,7 @@
 
 		background-color: color(bay, base);
 
-		@include psuedo();
+		@include psuedo(absolute);
 		@include transition();
 	}
 
@@ -100,10 +106,10 @@
 	}
 }
 
-
-// Second Level+ Menu Items (Projects/Universities/etc)
+/*----------  Second Level+ Menu Items (Projects/Universities/etc)  ----------*/
 .main-navigation-menu .menu-item .menu-item {
 	margin-left: 0;
+	padding: 0;
 
 	text-transform: initial;
 }
@@ -125,60 +131,108 @@
 	}
 }
 
-// Third Level+ Menu Items
+/*----------  Third Level+ Menu Items  ----------*/
 .main-navigation-menu .menu-item .menu-item .menu-item a {
 	font-weight: normal;
 }
 
-// Close button
+/*----------  Close Button  ----------*/
 .main-navigation-menu--close {
-	line-height: 40px;
+	display: none;
+}
+/*=====  End of Main Navigation  ======*/
 
-	position: absolute;
-	bottom: 0;
-	left: 5px;
 
-	width: 40px;
-	height: 40px;
 
-	text-align: center;
 
-	background-color: color(primary, lightest);
 
-	&:hover {
-		cursor: pointer;
+
+/*=============================================
+=            Menu Helper Classes            =
+=============================================*/
+.main-navigation-menu .menu-item {
+	&.ascent-2-col {
+		flex: 2 1 auto;
+
+		& > .sub-menu {
+			display: flex;
+			flex-direction: column;
+
+			& > .menu-item {
+				// width: 100%;
+			}
+		}
 	}
 }
+/*=====  End of Menu Helper Classes  ======*/
 
 
 
 
 
-// Media Queries
+
+/*=============================================
+=            Media Queries            =
+=============================================*/
+
+/*----------  Small  ----------*/
 @include mq('small') {
+	// Small Styles Here
 }
 
-@include mq('large') {
+/*----------  Medium  ----------*/
+@include mq('medium') {
 	.main-navigation-menu {
 		display: flex;
 		justify-content: space-between;
 
-		padding-right: $global-base-unit * 4;
-		padding-left: $global-base-unit * 4;
+		padding-right: 3vw;
+		padding-left: 3vw;
 	}
 
 	.main-navigation-menu .menu-item {
-		width: 20%;
+		padding: $global-base-unit 0 $global-base-unit * 2;
 
 		@include clear-margin('left');
+	}
 
-		&:first-child {
-			width: 40%;
+	.main-navigation-menu .menu-item a::before,
+	.main-navigation-menu .menu-item a::after {
+		display: none;
+	}
+
+	// Close button
+	.main-navigation-menu--close {
+		line-height: 40px;
+
+		position: absolute;
+		bottom: 0;
+		left: 5px;
+
+		display: block;
+
+		width: 40px;
+		height: 40px;
+
+		text-align: center;
+
+		background-color: color(primary, lightest);
+
+		&:hover {
+			cursor: pointer;
 		}
 	}
 
-	.main-navigation-menu .menu-item a::before
-	, .main-navigation-menu .menu-item a::after {
-		display: none;
+	.main-navigation-menu .menu-item {
+		&.ascent-2-col {
+			& > .sub-menu {
+				flex-direction: row;
+
+				& > .menu-item {
+					flex: 1 1 50%;
+				}
+			}
+		}
 	}
 }
+/*=====  End of Media Queries  ======*/
