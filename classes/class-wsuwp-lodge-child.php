@@ -35,4 +35,96 @@ final class WSU_WP_Lodge_Child
 
 		return $cat_args;
 	}
+
+	/**
+	 * Featured Projects Shortcode
+	 */
+	static public function featured_projects( $atts ) {
+
+		// Attributes
+		$atts = shortcode_atts(
+			array(
+				'project_number' => '',
+				'limit'          => 2
+			),
+			$atts,
+			'featured_projects'
+		);
+
+		// Default Args
+		$args = array(
+			'post_type'      => 'wsuwp_uc_project',
+			'posts_per_page' => $atts['limit'],
+			'category_name'  => 'featured',
+			'order'          => 'ASC',
+			'orderby'        => 'meta_value_num',
+			'meta_query' => array(
+				array(
+					'key' => '_ascent_uc_project_number'
+				)
+			)
+		);
+
+		// Project Number In Args Modification
+		$project_number__in = $atts['project_number'];
+
+		if ( !empty($project_number__in) ) {
+
+			$project_number__in = explode(', ', $project_number__in);
+
+			$args['meta_query'] = array(
+				'project_number__in' => array(
+					'key'     => '_ascent_uc_project_number',
+					'value'   => $project_number__in,
+					'compare' => 'IN',
+				)
+			);
+
+			// If manually setting featured projects, don't set a hard limit on how many projects can be displayed
+			$args['posts_per_page'] = -1;
+
+			// If manually setting featured projects, don't require featured category taxonomy
+			$args['category_name'] = null;
+		}
+
+		// Start Query
+		$query = new WP_Query( $args );
+
+		ob_start();
+		?>
+
+		<?php if ( $query->have_posts() ) : ?>
+
+			<div class="ascent-featured-project--container">
+
+				<?php while ( $query->have_posts() ) : ?>
+
+					<?php $query->the_post(); ?>
+
+					<div class="ascent-featured-project--item">
+
+						<a href="<?php the_permalink(); ?>" class="ascent-featured-project--link">
+							<div class="ascent-featured-project--number"><?php echo get_post_meta(get_the_ID(), '_ascent_uc_project_number', true); ?></div>
+							<div class="ascent-featured-project--title"><?php echo get_the_title(); ?></div>
+						</a>
+
+					</div>
+
+				<?php endwhile; ?>
+
+			</div>
+
+		<?php else : ?>
+
+			// no projects found
+
+		<?php endif; ?>
+
+		<?php
+		/* Restore original Post Data */
+		wp_reset_postdata();
+
+		return ob_get_clean();
+
+	}
 }

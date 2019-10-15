@@ -22,9 +22,12 @@ require_once 'classes/class-ascent-uc-project.php';
 add_action( 'wp_enqueue_scripts', 'WSU_WP_Lodge_Child::enqueue_scripts' );
 add_action( 'widgets_init', 'WSU_WP_Lodge_Child_Sidebars::add_sidebars_to_widgets_area');
 
-
-
 /**
  * Filters
  */
 add_filter( 'widget_categories_args', 'WSU_WP_Lodge_Child::widget_categories_args_filter', 10, 1 );
+
+/**
+ * Shorcodes
+ */
+add_shortcode( 'featured_projects', 'WSU_WP_Lodge_Child::featured_projects' );

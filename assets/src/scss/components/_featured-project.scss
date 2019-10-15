@@ -1,0 +1,40 @@
+.ascent-featured-project--container {
+	padding-top: $global-base-unit * 2;
+	padding-bottom: $global-base-unit * 2;
+
+	border-top: 12px solid color(secondary, base);
+}
+
+.ascent-featured-project--item {
+	padding-bottom: $global-base-unit * 2;
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+
+.ascent-featured-project--link {
+	display: block;
+
+	color: color(primary, lighter);
+
+	&:visited,
+	&:focus {
+		color: color(primary, lighter);
+	}
+
+	&:hover,
+	&:active {
+		color: color(secondary, base);
+	}
+}
+
+.ascent-featured-project--number {
+	font-weight: 900;
+
+	@include ms-respond(font-size, 1);
+}
+
+.ascent-featured-project--title {
+	@include ms-respond(font-size, -1);
+}

@@ -26,9 +26,10 @@
 //-----------------------------------------
 // Components
 //-----------------------------------------
+@import "components/archive";
+@import "components/buttons";
 @import "components/entry-header";
+@import "components/featured-project";
+@import "components/home";
 @import "components/project-by-number";
 @import "components/project-by-type";
-@import "components/archive";
-@import "components/home";
-@import "components/buttons";
