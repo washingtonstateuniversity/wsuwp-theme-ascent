@@ -95,11 +95,6 @@
 }
 
 .site-header-search__results {
-	overflow-y: scroll;
-
-	max-width: 800px;
-	max-height: 500px;
-	margin: 0 auto;
 	padding: 0 5vw;
 }
 
@@ -120,6 +115,11 @@
 
 /*----------  Search Results  ----------*/
 .search-results {
+	overflow-y: scroll;
+
+	max-width: 800px;
+	max-height: 500px;
+	margin: 0 auto;
 	margin: 0 auto;
 }
 
@@ -142,5 +142,8 @@
 }
 
 .search-results__more {
+	max-width: 800px;
+	margin: $global-base-unit auto;
+
 	@include button();
 }
