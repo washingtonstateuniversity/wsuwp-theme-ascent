@@ -3,15 +3,11 @@
 	transition: $duration $bezier $element;
 }
 
-
-
 // Off-center Align
 @mixin align-off-center() {
 	margin-right: auto;
 	margin-left: 20vw;
 }
-
-
 
 // Cool Gradient Border
 @mixin border-gradient() {
@@ -33,5 +29,22 @@
 		content: "";
 
 		background: linear-gradient(#91ceff, #fcdc74);
+	}
+}
+
+/*----------  Button  ----------*/
+@mixin button() {
+	font-weight: bolder;
+
+	padding: $global-base-unit / 2;
+
+	text-align: center;
+
+	border: 2px solid color(primary, base);
+
+	&:hover {
+		cursor: pointer;
+
+		border-color: color(secondary, base);
 	}
 }

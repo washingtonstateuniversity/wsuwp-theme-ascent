@@ -23,6 +23,9 @@ final class WSU_WP_Lodge_Child_Helpers
 			case 'search':
 				include get_stylesheet_directory() . '/assets/src/img/ascent-search-icon.svg';
 				break;
+			case 'close':
+				include get_stylesheet_directory() . '/assets/src/img/ascent-close-icon.svg';
+				break;
 		}
 	}
 }

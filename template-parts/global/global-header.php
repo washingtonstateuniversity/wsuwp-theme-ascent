@@ -56,7 +56,10 @@
 			<div class="site-header-search__wrapper" id="site-header-search">
 				<div class="site-header-search__content">
 
-					<h2 class="site-header-search__title">Search</h2>
+					<div class="site-header-search__header-bar">
+						<h2 class="site-header-search__title">Search</h2>
+						<div class="site-header-search__close u-icon"><?php WSU_WP_Lodge_Child_Helpers::get_the_logo('close'); ?></div>
+					</div>
 
 					<form class="site-header-search__form">
 						<input
@@ -69,7 +72,7 @@
 						<?php WSU_WP_Lodge_Child_Helpers::get_the_logo('search'); ?>
 					</form>
 
-					<div class="site-header-search__results" id="datafetch">Search results will appear here</div>
+					<div class="site-header-search__results" id="datafetch"></div>
 				</div>
 			</div>
 		</div>

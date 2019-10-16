@@ -8,3 +8,20 @@
 [data-collapsed="false"] + * {
 	height: initial;
 }
+
+
+/*----------  Disable Scrolling  ----------*/
+.noScroll {
+	overflow: hidden;
+
+	height: 100%;
+}
+
+
+/*----------  SVGs Sizing Utility (u)  ----------*/
+.u-icon > svg {
+	width: 25px;
+	height: 25px;
+
+}
+

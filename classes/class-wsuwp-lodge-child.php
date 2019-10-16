@@ -20,6 +20,8 @@ final class WSU_WP_Lodge_Child
 
 		wp_enqueue_script( 'wsuwp-lodge-child-scripts', get_stylesheet_directory_uri() . '/assets/dist/child-scripts.js', array(), filemtime(get_stylesheet_directory() . '/assets/dist/child-scripts.js'), true );
 
+		wp_enqueue_script( 'jquery' );
+
 	}
 
 	/**

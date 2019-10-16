@@ -11,10 +11,22 @@ searchButton.addEventListener('click', function (e) {
 
 	if (isExpanded) {
 		_this.setAttribute('aria-expanded', 'false');
+		document.querySelector('body').classList.remove('noScroll');
 	} else {
 		_this.setAttribute('aria-expanded', 'true');
+		document.querySelector('.site-header-search__term').focus();
+		document.querySelector('body').classList.add('noScroll');
 	}
 });
+
+
+/*----------  Close Search Modal  ----------*/
+var closeSearchModal = document.querySelector('.site-header-search__close');
+
+closeSearchModal.addEventListener('click', function (e) {
+	document.querySelector('.site-header-search__button').setAttribute('aria-expanded', 'false');
+});
+
 
 /*----------  AJAX Search  ----------*/
 var searchTerm = document.querySelector('.site-header-search__term');
