@@ -103,6 +103,8 @@ export function hideCollapsedMenuItems() {
 /*----------  Fetch AJAX Response  ----------*/
 export function fetchResponse(inputValue) {
 
+	jQuery('#datafetch').html('<div class="u-loading"></div>');
+
 	jQuery.ajax({
 		url: 'http://ascent-aero.wordpress.test/wp-admin/admin-ajax.php',
 		type: 'post',

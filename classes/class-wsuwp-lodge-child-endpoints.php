@@ -38,11 +38,11 @@ final class WSU_WP_Lodge_Child_Endpoints
 
 			</div>
 
-			<div class="search-results__more">
-				<?php if ($query->found_posts > 5) : ?>
+			<?php if ($query->found_posts > 5) : ?>
+				<div class="search-results__more">
 					<a href="<?php echo site_url(); ?>?term=<?php echo esc_attr( $_POST['keyword'] ); ?>">Looking for more? We found <?php echo $query->found_posts - 5; ?> more results.</a>
-				<?php endif; ?>
-			</div>
+				</div>
+			<?php endif; ?>
 
 			<?php wp_reset_postdata();
 

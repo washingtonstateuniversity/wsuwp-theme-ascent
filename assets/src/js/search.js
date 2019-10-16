@@ -30,6 +30,8 @@ closeSearchModal.addEventListener('click', function (e) {
 
 /*----------  AJAX Search  ----------*/
 var searchTerm = document.querySelector('.site-header-search__term');
+var searchTimer;
+var searchCompletedTimeout = 500;
 
 // If value exsists in search field, show results
 if (searchTerm.value != '') {
@@ -37,6 +39,15 @@ if (searchTerm.value != '') {
 }
 
 // If user has typed in field, show results
-searchTerm.addEventListener('keyup', function (e) {
-	fetchResponse(searchTerm.value);
+searchTerm.addEventListener('keyup', function () {
+	clearTimeout(searchTimer);
+	searchTimer = setTimeout(processSearch, searchCompletedTimeout);
 });
+
+searchTerm.addEventListener('keydown', function () {
+	clearTimeout(searchTimer);
+});
+
+function processSearch() {
+	fetchResponse(searchTerm.value);
+}

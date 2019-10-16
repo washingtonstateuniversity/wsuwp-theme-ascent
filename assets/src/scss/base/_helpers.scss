@@ -22,6 +22,25 @@
 .u-icon > svg {
 	width: 25px;
 	height: 25px;
-
 }
+
+
+/*----------  Loading Icon  ----------*/
+.u-loading {
+	width: 50px;
+	height: 50px;
+	margin: auto;
+
+	animation: spin 2s linear infinite;
+
+	border: 5px solid color(black, lightest);
+	border-top: 5px solid color(primary, base);
+	border-radius: 50%;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
 
