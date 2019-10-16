@@ -10,6 +10,7 @@
  * Classes
  */
 require_once 'classes/class-wsuwp-lodge-child.php';
+require_once 'classes/class-wsuwp-lodge-child-endpoints.php';
 require_once 'classes/class-wsuwp-lodge-child-helpers.php';
 require_once 'classes/class-wsuwp-lodge-child-sidebars.php';
 
@@ -20,7 +21,10 @@ require_once 'classes/class-ascent-uc-project.php';
  * Actions
  */
 add_action( 'wp_enqueue_scripts', 'WSU_WP_Lodge_Child::enqueue_scripts' );
-add_action( 'widgets_init', 'WSU_WP_Lodge_Child_Sidebars::add_sidebars_to_widgets_area');
+add_action( 'widgets_init', 'WSU_WP_Lodge_Child_Sidebars::add_sidebars_to_widgets_area' );
+add_action( 'wp_ajax_fetch_search_results' , 'WSU_WP_Lodge_Child_Endpoints::fetch_search_results' );
+add_action( 'wp_ajax_nopriv_fetch_search_results','WSU_WP_Lodge_Child_Endpoints::fetch_search_results' );
+
 
 /**
  * Filters

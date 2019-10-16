@@ -22,7 +22,7 @@
 				class="main-navigation-button hamburger hamburger--spin"
 				type="button"
 				aria-label="Menu"
-				aria-controls="navigation"
+				aria-controls="primary-nav"
 				data-collapsed="true"
 			>
 				<span class="hamburger-box">
@@ -41,7 +41,37 @@
 			) );
 			?>
 
-
 		</nav><!-- #site-navigation -->
+
+		<div class="site-header-search">
+			<button
+				class="site-header-search__button"
+				aria-label="Search"
+				aria-controls="site-header-search"
+				aria-expanded="false"
+			>
+				<?php WSU_WP_Lodge_Child_Helpers::get_the_logo('search'); ?>
+			</button>
+
+			<div class="site-header-search__wrapper" id="site-header-search">
+				<div class="site-header-search__content">
+
+					<h2 class="site-header-search__title">Search</h2>
+
+					<form class="site-header-search__form">
+						<input
+							type="text"
+							name="term"
+							class="site-header-search__term"
+							id="term"
+							placeholder="What are you looking for?"
+						>
+						<?php WSU_WP_Lodge_Child_Helpers::get_the_logo('search'); ?>
+					</form>
+
+					<div class="site-header-search__results" id="datafetch">Search results will appear here</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </header><!-- #masthead -->

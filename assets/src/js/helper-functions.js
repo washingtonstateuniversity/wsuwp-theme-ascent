@@ -1,6 +1,16 @@
-// Collapse Section
-// https://css-tricks.com/using-css-transitions-auto-dimensions/
 
+/*=============================================
+=            Helper Functions :)             =
+=============================================*/
+
+/**
+ *
+ * Collapse & Expand Section is based on documentation outlined here:
+ * https://css-tricks.com/using-css-transitions-auto-dimensions/
+ *
+ */
+
+/*----------  Collapse Section  ----------*/
 export function collapseSection(element) {
 	// get the height of the element's inner content, regardless of its actual size
 	var sectionHeight = element.scrollHeight;
@@ -21,6 +31,7 @@ export function collapseSection(element) {
 	element.setAttribute('data-collapsed', 'true');
 }
 
+/*----------  Expand Section  ----------*/
 export function expandSection(element) {
 	// get the height of the element's inner content, regardless of its actual size
 	var sectionHeight = element.scrollHeight;
@@ -42,11 +53,8 @@ export function expandSection(element) {
 	element.setAttribute('data-collapsed', 'false');
 }
 
-/**
- * Get Position of Element
- * @param element
- */
 
+/*----------  Get Position of Element  ----------*/
 export function getPosition(element) {
 	var xPosition = 0;
 	var yPosition = 0;
@@ -60,9 +68,7 @@ export function getPosition(element) {
 	return { x: xPosition, y: yPosition };
 }
 
-/**
- * Check if browser is large!
- */
+/*----------  Check if screen size is medium  ----------*/
 export function isScreenSizeMedium() {
 	// Set Pixel Width for Breakpoint
 	var thisIsMedium = 1024;
@@ -75,9 +81,7 @@ export function isScreenSizeMedium() {
 	}
 }
 
-/**
- * Show Collapsed Menu Items
- */
+/*----------  Show Collapsed Menu Items  ----------*/
 export function showCollapsedMenuItems() {
 	var menuItemAnchors = document.querySelectorAll('.menu-item > [data-collapsed="true"]');
 
@@ -86,9 +90,7 @@ export function showCollapsedMenuItems() {
 	});
 }
 
-/**
- * Hide Collapsed Menu Items
- */
+/*----------  Hide Collapsed Menu Items  ----------*/
 export function hideCollapsedMenuItems() {
 	var menuItemAnchors = document.querySelectorAll('.menu-item > [data-collapsed="false"]');
 
@@ -96,3 +98,20 @@ export function hideCollapsedMenuItems() {
 		element.setAttribute('data-collapsed', 'true');
 	});
 }
+
+
+/*----------  Fetch AJAX Response  ----------*/
+export function fetchResponse(inputValue) {
+
+	jQuery.ajax({
+		url: 'http://ascent-aero.wordpress.test/wp-admin/admin-ajax.php',
+		type: 'post',
+		data: { action: 'fetch_search_results', keyword: inputValue },
+		success: function (data) {
+			jQuery('#datafetch').html(data);
+		}
+	});
+}
+
+
+/*=====  End of Helper Functions :)   ======*/

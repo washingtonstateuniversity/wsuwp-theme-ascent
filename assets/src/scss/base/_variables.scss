@@ -57,6 +57,7 @@ $colors: (
 	),
 	white: (
 		base: $white,
+		trans: transparentize($white, .1),
 	),
 	bay: (
 		base: $bay,

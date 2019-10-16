@@ -1,130 +1,15 @@
-/*--------------------------------------------------------------
-## Site Header Bar
---------------------------------------------------------------*/
-.site-header {
-	position: relative;
 
-	padding: 20px;
+/*=============================================
+=            Header Styles            =
+=============================================*/
 
-	background-color: color(white, base);
-}
+/*----------  Header Bar  ----------*/
+@import "header/header-bar";
 
-.site-header.is-active {
-	background-color: color(bay, base);
+/*----------  Main Navigation  ----------*/
+@import "header/main-navigation";
 
-	.site-header-title a,
-	.hamburger {
-		color: color(white, base);
-	}
+/*----------  Site Header Search  ----------*/
+@import "header/search";
 
-	.hamburger .hamburger-inner,
-	.hamburger .hamburger-inner::before,
-	.hamburger .hamburger-inner::after {
-		background: color(white, base);
-	}
-}
-
-.site-header-wrapper {
-	display: flex;
-	align-items: center;
-	flex-flow: row;
-	justify-content: space-between;
-
-	max-width: $global-grid-size;
-	margin: 0 auto;
-}
-
-.home .site-header-branding {
-	visibility: hidden;
-
-	opacity: 0;
-}
-
-.is-active .logo-fill-color {
-	fill: color(white, base);
-}
-
-.logo-fill-color {
-	fill: color(bay, base);
-}
-
-.site-header-title {
-	font-family: $global-font-family;
-	font-weight: 700;
-
-	text-transform: uppercase;
-
-	@include clear-margin('bottom');
-	@include clear-margin('top');
-
-	a {
-		display: block;
-
-		width: 165px;
-
-		text-decoration: none;
-
-		color: color(bay, base);
-	}
-}
-
-.site-header-title a,
-.hamburger {
-	color: color(bay, base);
-}
-
-.hamburger .hamburger-inner,
-.hamburger .hamburger-inner::before,
-.hamburger .hamburger-inner::after {
-	background: color(bay, base);
-}
-
-.hamburger {
-	display: flex;
-	align-items: center;
-
-	&:focus {
-		outline: none;
-	}
-
-	&.is-active:hover,
-	&:hover {
-		opacity: 1;
-	}
-}
-
-.hamburger-label {
-	font-family: sans-serif;
-
-	padding-left: 10px;
-}
-
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-	height: 2px;
-
-	border-radius: 0;
-}
-
-.hamburger-inner {
-	width: 36px;
-}
-
-.hamburger-inner::after {
-	width: 32px;
-}
-
-.hamburger.is-active {
-	.hamburger-inner,
-	.hamburger-inner::before,
-	.hamburger-inner::after {
-		width: 40px;
-	}
-}
-
-/*--------------------------------------------------------------
-## Main Navigation
---------------------------------------------------------------*/
-@import "../components/main-navigation"
-
+/*=====  End of Header Styles  ======*/
