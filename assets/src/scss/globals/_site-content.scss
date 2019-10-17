@@ -3,7 +3,8 @@
 }
 
 .entry-content {
-	@include row();
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .entry-content ul {
