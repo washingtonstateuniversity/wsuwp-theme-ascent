@@ -127,6 +127,36 @@ final class WSU_WP_Lodge_Child
 		wp_reset_postdata();
 
 		return ob_get_clean();
+	}
 
+	/**
+	 * Custom Password Page Login Form
+	 */
+	public static function page_login_form($atts) {
+		$atts = shortcode_atts(
+			array(
+				'id' => ''
+			),
+			$atts,
+			'page_login_form'
+		);
+
+		$label = 'pwbox-' . ( empty($atts['id']) ? rand() : $atts['id'] );
+
+		ob_start();
+		?>
+
+		<form action="<?php echo esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ); ?>" class="post-password-form" method="post">
+			<p>
+				<label for="<?php echo $label; ?>">
+					Password: <input name="post_password" id="<?php $label; ?>" type="password" size="20" />
+				</label>
+				<input type="submit" name="Submit" value="<?php echo esc_attr_x( 'Enter', 'post password form' ); ?>" />
+				<input type="hidden" name="_wp_http_referer" value="<?php echo esc_attr(get_permalink($atts['id'])); ?>" />
+			</p>
+		</form>
+
+		<?php
+		return ob_get_clean();;
 	}
 }

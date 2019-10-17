@@ -35,3 +35,4 @@ add_filter( 'widget_categories_args', 'WSU_WP_Lodge_Child::widget_categories_arg
  * Shorcodes
  */
 add_shortcode( 'featured_projects', 'WSU_WP_Lodge_Child::featured_projects' );
+add_shortcode( 'page_login_form', 'WSU_WP_Lodge_Child::page_login_form' );
