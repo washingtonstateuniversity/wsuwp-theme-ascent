@@ -53,17 +53,18 @@
 	@include ms-respond(font-size, 4);
 }
 
-.home-sidebar-primary {
+.home-sidebar-primary,
+.home-sidebar-secondary {
 	margin-top: $global-base-unit * 4;
+	margin-bottom: $global-base-unit * 4;
 	margin-left: $global-base-unit * 2;
 
-	@include column(12);
+	@include column(10);
 	@include border-gradient();
 	@include mq('medium') {
 		@include column(2);
 	}
 }
-
 
 // Separator
 .home-page-featured-separator {
@@ -154,16 +155,6 @@
 		color: color(secondary, dark);
 	}
 }
-
-.home-sidebar-secondary {
-	margin-top: $global-base-unit * 4;
-	margin-left: $global-base-unit * 2;
-
-	@include column(2);
-	@include border-gradient();
-}
-
-
 
 // Sidebars
 .widget-title {
