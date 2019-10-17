@@ -1,11 +1,11 @@
 //-----------------------------------------
-// Set All elements following a data-collapsed attr
+// Set All elements following a aria-expanded attr
 //-----------------------------------------
-[data-collapsed="true"] + * {
+[aria-expanded="false"] + * {
 	height: 0;
 }
 
-[data-collapsed="false"] + * {
+[aria-expanded="true"] + * {
 	height: initial;
 }
 

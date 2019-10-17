@@ -28,7 +28,7 @@ export function collapseSection(element) {
 		});
 	});
 
-	element.setAttribute('data-collapsed', 'true');
+	element.setAttribute('aria-expanded', 'false');
 }
 
 /*----------  Expand Section  ----------*/
@@ -49,8 +49,7 @@ export function expandSection(element) {
 
 	});
 
-	// mark the section as "currently not collapsed"
-	element.setAttribute('data-collapsed', 'false');
+	element.setAttribute('aria-expanded', 'true');
 }
 
 
@@ -83,19 +82,19 @@ export function isScreenSizeMedium() {
 
 /*----------  Show Collapsed Menu Items  ----------*/
 export function showCollapsedMenuItems() {
-	var menuItemAnchors = document.querySelectorAll('.menu-item > [data-collapsed="true"]');
+	var menuItemAnchors = document.querySelectorAll('.menu-item > [aria-expanded="false"]');
 
 	menuItemAnchors.forEach(element => {
-		element.setAttribute('data-collapsed', 'false');
+		element.setAttribute('aria-expanded', 'true');
 	});
 }
 
 /*----------  Hide Collapsed Menu Items  ----------*/
 export function hideCollapsedMenuItems() {
-	var menuItemAnchors = document.querySelectorAll('.menu-item > [data-collapsed="false"]');
+	var menuItemAnchors = document.querySelectorAll('.menu-item > [aria-expanded="true"]');
 
 	menuItemAnchors.forEach(element => {
-		element.setAttribute('data-collapsed', 'true');
+		element.setAttribute('aria-expanded', 'false');
 	});
 }
 

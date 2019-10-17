@@ -23,7 +23,7 @@
 				type="button"
 				aria-label="Menu"
 				aria-controls="primary-nav"
-				data-collapsed="true"
+				aria-expanded="false"
 			>
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>

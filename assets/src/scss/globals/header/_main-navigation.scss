@@ -25,7 +25,7 @@
 
 	@include transition();
 
-	&[data-collapsed='false'] {
+	&[aria-expanded='true'] {
 		border-bottom: 2px solid color(secondary, base);
 	}
 }
@@ -95,7 +95,7 @@
 	}
 }
 
-.main-navigation-menu .menu-item a[data-collapsed='true'] {
+.main-navigation-menu .menu-item a[aria-expanded='false'] {
 	&::before {
 		top: calc(50% - 3px);
 	}

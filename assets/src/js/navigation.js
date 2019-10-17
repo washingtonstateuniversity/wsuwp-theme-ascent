@@ -9,32 +9,32 @@ import { hideCollapsedMenuItems } from './helper-functions';
 Set Parent Menu Controls
 */
 
-// Add data-collapsed attr to all menu items that have children
+// Add aria-expanded attr to all menu items that have children
 document.querySelectorAll('.menu-item-has-children > a').forEach(element => {
-	element.setAttribute('data-collapsed', 'true');
+	element.setAttribute('aria-expanded', 'false');
 });
 
 /**
  * Expand/Collapse Sibling Elements
  *
- * Manually add data-collapsed="true" to any element and its next sibling will collapse
+ * Manually add aria-expanded="true" to any element and its next sibling will collapse
  * or programmatically add attribute.
  */
-var parentMenuItem = document.querySelectorAll('[data-collapsed]');
+var parentMenuItem = document.querySelectorAll('[aria-expanded]');
 
 parentMenuItem.forEach(element => {
 	element.addEventListener('click', function (e) {
 		e.preventDefault();
 
 		var subMenu = element.nextElementSibling;
-		var isCollapsed = element.getAttribute('data-collapsed') === 'true';
+		var isCollapsed = element.getAttribute('aria-expanded') === 'false';
 
 		if (isCollapsed) {
 			expandSection(subMenu);
-			element.setAttribute('data-collapsed', 'false');
+			element.setAttribute('aria-expanded', 'true');
 		} else {
 			collapseSection(subMenu);
-			element.setAttribute('data-collapsed', 'true');
+			element.setAttribute('aria-expanded', 'false');
 		}
 	})
 });
@@ -48,7 +48,7 @@ parentMenuItem.forEach(element => {
 var menuButton = document.querySelectorAll('.main-navigation-button');
 
 menuButton[0].addEventListener('click', function (e) {
-	var menuButtonIsCollapsed = menuButton[0].getAttribute('data-collapsed') === "true";
+	var menuButtonIsCollapsed = menuButton[0].getAttribute('aria-expanded') === "false";
 
 	if (!menuButtonIsCollapsed) {
 		// Add is-active class to masthead
@@ -91,11 +91,9 @@ if (isScreenSizeMedium()) {
 document.querySelector('#closeMenu').addEventListener('click', function (e) {
 	e.preventDefault();
 
-	// debugger
-
 	// Reset Main Navigation Button
 	var mainNavButton = document.querySelector('.main-navigation-button');
-	mainNavButton.setAttribute('data-collapsed', 'true');
+	mainNavButton.setAttribute('aria-expanded', 'false');
 	mainNavButton.classList.remove('is-active');
 
 	// Reset Masthead
@@ -107,13 +105,3 @@ document.querySelector('#closeMenu').addEventListener('click', function (e) {
 
 	collapseSection(primaryNav);
 });
-
-
-/**
- * Set Class if three levels deep
- */
-// var subMenu = document.querySelectorAll('.menu-item-has-children > .sub-menu');
-
-// if
-
-// console.log(wearedeep);
