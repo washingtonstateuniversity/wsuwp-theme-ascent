@@ -46,7 +46,7 @@ a {
 	@include transition();
 
 	&:visited {
-		color: color(bay, dark);
+		color: color(primary, base);
 	}
 
 	&:hover {

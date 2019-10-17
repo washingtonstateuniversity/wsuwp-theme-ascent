@@ -133,12 +133,24 @@
 		border-bottom: none;
 	}
 }
-.ajax-search-results__title {
-	font-weight: 700;
 
-	text-transform: uppercase;
+.ajax-search-results__item a {
+	.ajax-search-results__title {
+		font-weight: 700;
 
-	@include ms-respond(font-size, 2);
+		text-transform: uppercase;
+
+		color: color(primary, base);
+
+		@include transition();
+		@include ms-respond(font-size, 2);
+	}
+
+	&:hover {
+		.ajax-search-results__title {
+			color: color(secondary, base);
+		}
+	}
 }
 
 .ajax-search-results__more {

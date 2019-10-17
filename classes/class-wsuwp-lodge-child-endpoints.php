@@ -28,9 +28,13 @@ final class WSU_WP_Lodge_Child_Endpoints
 
 					<div class="ajax-search-results__item">
 
-						<div class="ajax-search-results__title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title();?></a></div class="">
+						<a href="<?php echo esc_url( get_permalink() ); ?>">
 
-						<?php the_excerpt(); ?>
+							<div class="ajax-search-results__title"><?php the_title();?></div>
+
+							<?php the_excerpt(); ?>
+
+						</a>
 
 					</div>
 
