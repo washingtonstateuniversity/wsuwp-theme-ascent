@@ -10,7 +10,6 @@
 	background-color: color(white, base);
 
 	&::after {
-		position: absolute;
 		bottom: -140px;
 		left: -200px;
 
@@ -21,14 +20,12 @@
 
 		background: color(secondary, base);
 
-		@include psuedo();;
+		@include psuedo(absolute);
 	}
 }
 
 .site-footer-byline {
 	margin-bottom: 0;
-
-	// @include font-size(14px, 1.4);
 }
 
 .site-footer-links {
