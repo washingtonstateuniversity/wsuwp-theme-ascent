@@ -4,10 +4,15 @@
 	overflow: hidden;
 
 	margin-top: $global-base-unit * 4;
+	padding-right: $global-base-unit;
 	padding-bottom: $global-base-unit * 3;
-	padding-left: $global-base-unit * 4;
+	padding-left: $global-base-unit;
 
 	background-color: color(white, base);
+
+	@include mq('small') {
+		padding-left: $global-base-unit * 4;
+	}
 
 	&::after {
 		bottom: -140px;
@@ -30,8 +35,17 @@
 
 .site-footer-links {
 	display: flex;
+	flex-direction: column;
+
+	padding-left: $global-base-unit;
 
 	list-style: none;
+
+	@include mq('small') {
+		flex-direction: row;
+
+		padding-left: 0;
+	}
 }
 
 .site-footer-link-item {

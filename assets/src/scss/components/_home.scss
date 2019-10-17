@@ -113,7 +113,7 @@
 
 	@include row('fixed');
 	@include gutter();
-	@include mq('large') {
+	@include mq('medium') {
 		flex-direction: row;
 	}
 }
@@ -121,6 +121,10 @@
 .home-recent-news {
 	margin-top: $global-base-unit * 4;
 
+	@include column(12);
+	@include mq('medium') {
+		@include column(10);
+	}
 	@include mq('large') {
 		padding-right: $global-base-unit * 6;
 		padding-left: $global-base-unit * 6;
