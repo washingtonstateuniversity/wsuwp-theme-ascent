@@ -64,7 +64,7 @@
 					<form class="site-header-search__form">
 						<input
 							type="text"
-							name="term"
+							name="s"
 							class="site-header-search__term"
 							id="term"
 							placeholder="What are you looking for?"

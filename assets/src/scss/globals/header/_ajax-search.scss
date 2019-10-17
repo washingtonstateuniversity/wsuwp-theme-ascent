@@ -116,12 +116,12 @@
 
 
 /*----------  Search Results  ----------*/
-.search-results {
+.ajax-search-results {
 	max-width: 800px;
 	margin: 0 auto;
 }
 
-.search-results__item {
+.ajax-search-results__item {
 	margin-bottom: $global-base-unit * 3;
 	padding-bottom: $global-base-unit * 3;
 
@@ -133,7 +133,7 @@
 		border-bottom: none;
 	}
 }
-.search-results__title {
+.ajax-search-results__title {
 	font-weight: 700;
 
 	text-transform: uppercase;
@@ -141,7 +141,7 @@
 	@include ms-respond(font-size, 2);
 }
 
-.search-results__more {
+.ajax-search-results__more {
 	max-width: 800px;
 	margin: $global-base-unit auto;
 	margin-bottom: $global-base-unit * 4;

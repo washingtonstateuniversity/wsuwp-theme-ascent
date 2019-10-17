@@ -1,0 +1,32 @@
+.search .content-area {
+	max-width: 800px;
+}
+
+.search article {
+	margin-bottom: $global-base-unit * 3;
+	padding-bottom: $global-base-unit * 3;
+
+	border-bottom: 2px solid color(secondary, base);
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.search .entry-title {
+	margin-top: $global-base-unit;
+
+	@include transition();
+}
+
+.search a:hover .entry-title {
+	color: color(secondary, base);
+}
+.search a p {
+	color: color(black, base);
+
+	&:hover,
+	&:visited {
+		color: color(black, base);
+	}
+}

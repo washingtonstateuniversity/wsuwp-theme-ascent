@@ -3,8 +3,10 @@
 }
 
 .entry-content {
-	ul {
-		margin-top: $global-base-unit * 3;
-		margin-left: $global-base-unit * 3;
-	}
+	@include row();
+}
+
+.entry-content ul {
+	margin-top: $global-base-unit * 3;
+	margin-left: $global-base-unit * 3;
 }

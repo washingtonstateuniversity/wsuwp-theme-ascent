@@ -22,13 +22,13 @@ final class WSU_WP_Lodge_Child_Endpoints
 
 		if( $query->have_posts() ) : ?>
 
-			<div class="search-results">
+			<div class="ajax-search-results">
 
 				<?php while( $query->have_posts() ): $query->the_post(); ?>
 
-					<div class="search-results__item">
+					<div class="ajax-search-results__item">
 
-						<div class="search-results__title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title();?></a></div class="">
+						<div class="ajax-search-results__title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title();?></a></div class="">
 
 						<?php the_excerpt(); ?>
 
@@ -39,8 +39,8 @@ final class WSU_WP_Lodge_Child_Endpoints
 			</div>
 
 			<?php if ($query->found_posts > 5) : ?>
-				<div class="search-results__more">
-					<a href="<?php echo site_url(); ?>?term=<?php echo esc_attr( $_POST['keyword'] ); ?>">Looking for more? We found <?php echo $query->found_posts - 5; ?> more results.</a>
+				<div class="ajax-search-results__more">
+					<a href="<?php echo site_url(); ?>?s=<?php echo esc_attr( $_POST['keyword'] ); ?>">Looking for more? We found <?php echo $query->found_posts - 5; ?> more results.</a>
 				</div>
 			<?php endif; ?>
 
