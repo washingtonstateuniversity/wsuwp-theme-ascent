@@ -22,7 +22,6 @@
 	}
 
 	&::after {
-		position: absolute;
 		top: -50%;
 		right: -88px;
 
@@ -33,7 +32,7 @@
 
 		background-color: color(white);
 
-		@include psuedo();
+		@include psuedo(absolute);
 	}
 }
 

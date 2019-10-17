@@ -8,8 +8,9 @@
 .project-by-number-link {
 	display: block;
 
-	padding-top: $global-base-unit;
-	padding-bottom: $global-base-unit * 2;
+	width: 100%;
+	padding-top: $global-base-unit * 1.5;
+	padding-bottom: $global-base-unit * 1.5;
 
 	text-decoration: none;
 
