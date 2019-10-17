@@ -1,8 +1,13 @@
 .site-header-search {
 	position: relative;
+
+	display: flex;
+	align-items: center;
 }
 
 .site-header-search__button {
+	height: 25px;
+	margin-top: 0;
 	margin-left: $global-base-unit;
 	padding: 0;
 
@@ -146,9 +151,17 @@
 		@include ms-respond(font-size, 2);
 	}
 
+	p {
+		color: color(black, base);
+	}
+
 	&:hover {
 		.ajax-search-results__title {
 			color: color(secondary, base);
+		}
+
+		p {
+			color: color(black, base);
 		}
 	}
 }
