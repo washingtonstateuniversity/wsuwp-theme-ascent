@@ -7,9 +7,9 @@ searchButton.addEventListener('click', function (e) {
 	e.preventDefault();
 
 	var _this = this;
-	var isExpanded = _this.getAttribute('aria-expanded') === 'true';
+	var isNotExpanded = _this.getAttribute('aria-expanded') === 'false';
 
-	if (isExpanded) {
+	if (isNotExpanded) {
 		_this.setAttribute('aria-expanded', 'false');
 		document.querySelector('body').classList.remove('noScroll');
 	} else {

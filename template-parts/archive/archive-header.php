@@ -12,8 +12,7 @@
 <header class="archive-header-page-header">
 
 	<div class="entry-header-featured-image">
-		<!-- TODO: figure out how to handle images on archive templates -->
-		<img src="https://source.unsplash.com/1600x900/?airplanes,sky,airports,aviation,sustainability,jet,clouds">
+		<img src="https://s3.wp.wsu.edu/uploads/sites/192/2015/04/Clouds-Color0.jpg" alt="Image of clouds">
 	</div>
 
 	<h1 class="archive-header-heading">

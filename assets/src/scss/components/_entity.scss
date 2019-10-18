@@ -24,13 +24,15 @@
 	@include ms-respond(font-size, 0);
 }
 
-.tax-wsuwp_uc_entity_type .archive-content-list {
+.tax-wsuwp_uc_entity_type .archive-content-list,
+.post-type-archive-wsuwp_uc_entity .archive-content-list {
 	display: grid;
 
 	grid-template-columns: 1fr 1fr;
 }
 
-.tax-wsuwp_uc_entity_type .archive-content-list article {
+.tax-wsuwp_uc_entity_type .archive-content-list article,
+.post-type-archive-wsuwp_uc_entity .archive-content-list article {
 	display: flex;
 	align-items: center;
 	justify-content: center;
