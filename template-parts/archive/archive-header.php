@@ -12,7 +12,7 @@
 <header class="archive-header-page-header">
 
 	<div class="entry-header-featured-image">
-		<img src="https://s3.wp.wsu.edu/uploads/sites/192/2015/04/Clouds-Color0.jpg" alt="Image of clouds">
+		<img src="https://s3.wp.wsu.edu/uploads/sites/192/2019/10/brady-bellini-_hpk_92Crhs-unsplash.jpg" alt="white clouds above silhouette of clouds at day">
 	</div>
 
 	<h1 class="archive-header-heading">
