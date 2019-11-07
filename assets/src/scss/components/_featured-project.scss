@@ -16,16 +16,16 @@
 .ascent-featured-project--link {
 	display: block;
 
-	color: color(primary, lighter);
+	color: color(primary, base);
 
 	&:visited,
 	&:focus {
-		color: color(primary, lighter);
+		color: color(primary, base);
 	}
 
 	&:hover,
 	&:active {
-		color: color(secondary, base);
+		color: color(primary, dark);
 	}
 }
 

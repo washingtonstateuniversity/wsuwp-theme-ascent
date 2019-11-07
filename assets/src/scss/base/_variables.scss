@@ -30,7 +30,7 @@ $colors: (
 		light: lighten($primary, 15%),
 		lighter: lighten($primary, 25%),
 		lightest: lighten($primary, 50%),
-		dark: darken($primary, 20%),
+		dark: darken($primary, 30%),
 		trans: transparentize($primary, .5)
 	),
 	secondary: (
@@ -38,7 +38,7 @@ $colors: (
 		light: lighten($secondary, 15%),
 		lighter: lighten($secondary, 35%),
 		lightest: lighten($secondary, 50%),
-		dark: darken($secondary, 20%),
+		dark: darken($secondary, 50%),
 		trans: transparentize($secondary, .5)
 	),
 	black: (
