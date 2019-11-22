@@ -159,4 +159,18 @@ final class WSU_WP_Lodge_Child
 		<?php
 		return ob_get_clean();;
 	}
+
+	/**
+	 * Custom favicon
+	 */
+	public static function site_favicon() {
+		ob_start();
+		?>
+		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/src/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/src/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/src/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/src/img/favicon/site.webmanifest">
+		<?php
+		echo ob_get_clean();
+	}
 }
