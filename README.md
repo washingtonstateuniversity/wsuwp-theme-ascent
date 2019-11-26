@@ -1,3 +1,3 @@
 # WSU WP Ascent Child Theme
 
-The child theme built for the Ascent.aero website project.
+A child theme built for the [Ascent.aero](https://ascent.aero/) website redesign project.
