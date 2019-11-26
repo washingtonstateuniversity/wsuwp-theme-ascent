@@ -5,8 +5,12 @@
 		max-width: $global-grid-size;
 		margin-right: auto;
 		margin-left: auto;
+		padding: 0 $global-base-unit;
+		grid-template-columns: 1fr;
 
-		grid-template-columns: 1fr 1fr;
+		@include mq('small') {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 	.entry-content .item {

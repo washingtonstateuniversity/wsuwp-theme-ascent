@@ -37,8 +37,9 @@
 }
 
 .entry-title {
-	max-width: 800px;
+	max-width: $global-grid-size;
 	margin: $global-base-unit auto;
+	padding: 0 $global-base-unit;
 }
 
 
