@@ -18,7 +18,6 @@ class Ascent_UC_Project {
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 		add_action( 'save_post', array( $this, 'save_post' ), 10, 2 );
 		add_action( 'pre_get_posts', array( $this, 'modify_archive_query' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ), 20 );
 		add_action( 'manage_wsuwp_uc_project_posts_columns', array( $this, 'manage_project_posts_columns' ), 10, 1 );
 		add_action( 'manage_wsuwp_uc_project_posts_custom_column', array( $this, 'manage_project_posts_custom_column' ), 10, 2 );
 		add_action( 'manage_edit-wsuwp_uc_project_sortable_columns', array( $this, 'sort_columns' ), 10, 1 );
@@ -27,14 +26,6 @@ class Ascent_UC_Project {
 		add_action( 'wp', array( $this, 'remove_default_project_content' ), 100, 1 );
 		add_filter( 'the_content', array( $this, 'add_content' ), 998, 1 );
 	}
-
-	/**
-	 * Enqueue scripts required in the admin.
-	 */
-	public function admin_enqueue_scripts() {
-		wp_enqueue_script( 'wsuwp-ascent-admin', get_stylesheet_directory_uri() . '/js/admin.js', array( 'jquery-ui-autocomplete' ), false, true );
-	}
-
 
 	/**
 	 * Modify the columns displayed in the list table for projects.
