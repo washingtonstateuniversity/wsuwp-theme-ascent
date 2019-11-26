@@ -84,24 +84,3 @@ window.addEventListener('resize', function () {
 if (isScreenSizeMedium()) {
 	showCollapsedMenuItems();
 }
-
-/**
- * Close Main Navigation
- */
-document.querySelector('#closeMenu').addEventListener('click', function (e) {
-	e.preventDefault();
-
-	// Reset Main Navigation Button
-	var mainNavButton = document.querySelector('.main-navigation-button');
-	mainNavButton.setAttribute('aria-expanded', 'false');
-	mainNavButton.classList.remove('is-active');
-
-	// Reset Masthead
-	var mastHead = document.querySelector('#masthead');
-	mastHead.classList.remove('is-active');
-
-	// Collapse Navigation
-	var primaryNav = document.querySelector('.main-navigation-menu');
-
-	collapseSection(primaryNav);
-});
