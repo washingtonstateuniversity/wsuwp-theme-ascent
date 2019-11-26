@@ -1,10 +1,11 @@
 .content-area {
+	max-width: $global-grid-size;
 	margin: 0 auto;
 }
 
 .entry-content {
 	max-width: 800px;
-	margin: 0 auto;
+	padding: 0 $global-base-unit;
 }
 
 .entry-content ul {

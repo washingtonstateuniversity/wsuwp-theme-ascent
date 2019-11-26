@@ -1,6 +1,6 @@
 {
     "name": "wsuwp-theme-lodge-child",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "description": "A child theme for the WSU WP Lodge theme.",
     "private": true,
     "main": "src/index.js",
