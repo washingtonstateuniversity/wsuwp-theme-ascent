@@ -3,7 +3,7 @@
 
 	overflow: hidden;
 
-	min-height: 250px;
+	min-height: 500px;
 
 	.wp-post-image,
 	img {
@@ -23,9 +23,9 @@
 
 	&::after {
 		top: -50%;
-		right: -88px;
+		right: -409px;
 
-		width: 173px;
+		width: 500px;
 		height: 200%;
 
 		transform: rotate(25deg);
