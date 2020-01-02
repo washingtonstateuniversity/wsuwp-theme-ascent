@@ -86,11 +86,11 @@ get_header();
 
 						<?php $post = $recent['ID']; ?>
 
-						<h3 class="home-recent-news-item--title">
-							<a class="home-recent-news-item--link" href="<?php echo get_permalink($post);?>"><?php echo get_the_title($post); ?></a>
-						</h3>
+						<h3 class="home-recent-news-item--title"><?php echo get_the_title($post); ?></h3>
 
 						<p><?php echo get_the_excerpt($post); ?></p>
+
+						<a class="home-recent-news-item__read-more--link" href="<?php echo get_permalink($post);?>">Read More</a>
 
 					</article>
 

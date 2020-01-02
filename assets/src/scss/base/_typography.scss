@@ -39,9 +39,9 @@ ul li {
 
 // Anchors
 a {
-	text-decoration: none;
+	text-decoration: underline;
 
-	color: color(bay, dark);
+	color: color(primary, base);
 
 	@include transition();
 
@@ -50,7 +50,9 @@ a {
 	}
 
 	&:hover {
-		color: color(secondary, dark);
+		text-decoration: underline;
+
+		color: color(primary, light);
 	}
 }
 
@@ -65,10 +67,12 @@ h1, h2, h3, h4, h5, h6 {
 
 	text-transform: uppercase;
 
-	color: color(primary, base);
+	color: color(black, light);
 }
 
 h1 {
+	color: color(primary, dark);
+
 	@include ms-respond(font-size, 4);
 }
 

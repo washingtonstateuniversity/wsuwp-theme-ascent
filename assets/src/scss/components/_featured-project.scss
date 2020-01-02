@@ -16,16 +16,12 @@
 .ascent-featured-project--link {
 	display: block;
 
+	text-decoration: none;
+
 	color: color(primary, base);
 
-	&:visited,
-	&:focus {
-		color: color(primary, base);
-	}
-
-	&:hover,
-	&:active {
-		color: color(primary, dark);
+	&:hover {
+		text-decoration: none;
 	}
 }
 
@@ -36,5 +32,11 @@
 }
 
 .ascent-featured-project--title {
+	text-decoration: underline;
+
 	@include ms-respond(font-size, -1);
+
+	&:hover {
+		text-decoration: underline;
+	}
 }

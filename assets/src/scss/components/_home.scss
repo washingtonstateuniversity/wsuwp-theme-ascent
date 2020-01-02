@@ -135,7 +135,7 @@
 
 .home-recent-news-item {
 	margin-bottom: $global-base-unit * 4;
-	padding-bottom: $global-base-unit * 4;
+	padding-bottom: $global-base-unit * 2;
 
 	border-bottom: 2px solid color(secondary, base);
 
@@ -148,16 +148,6 @@
 
 .home-recent-news-item--link {
 	text-decoration: none;
-
-	color: color(primary, base);
-
-	&:visited {
-		color: color(primary, base);
-	}
-
-	&:hover {
-		color: color(secondary, dark);
-	}
 }
 
 // Sidebars
@@ -175,7 +165,7 @@
 .home-sidebar-primary p,
 .home-sidebar-secondary .widget-title,
 .home-sidebar-secondary p {
-	color: color(primary, lighter);
+	color: color(black, light);
 }
 
 .home-sidebar-primary p,
