@@ -161,13 +161,6 @@
 	padding-left: $global-base-unit * 2;
 }
 
-.home-sidebar-primary .widget-title,
-.home-sidebar-primary p,
-.home-sidebar-secondary .widget-title,
-.home-sidebar-secondary p {
-	color: color(black, light);
-}
-
 .home-sidebar-primary p,
 .home-sidebar-secondary p {
 	@include ms-respond(font-size, -1);

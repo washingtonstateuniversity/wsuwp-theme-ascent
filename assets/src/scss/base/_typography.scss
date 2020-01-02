@@ -41,18 +41,18 @@ ul li {
 a {
 	text-decoration: underline;
 
-	color: color(primary, base);
+	color: color(bay, base);
 
 	@include transition();
 
 	&:visited {
-		color: color(primary, base);
+		color: color(bay, base);
 	}
 
 	&:hover {
 		text-decoration: underline;
 
-		color: color(primary, light);
+		color: color(bay, light);
 	}
 }
 
@@ -67,12 +67,10 @@ h1, h2, h3, h4, h5, h6 {
 
 	text-transform: uppercase;
 
-	color: color(black, light);
+	color: color(primary, base);
 }
 
 h1 {
-	color: color(primary, dark);
-
 	@include ms-respond(font-size, 4);
 }
 
