@@ -20,6 +20,7 @@ require_once 'classes/class-ascent-uc-project.php';
 /**
  * Actions
  */
+add_action( 'admin_enqueue_scripts', 'WSU_WP_Lodge_Child::admin_enqueue_scripts' );
 add_action( 'wp_enqueue_scripts', 'WSU_WP_Lodge_Child::enqueue_scripts' );
 add_action( 'widgets_init', 'WSU_WP_Lodge_Child_Sidebars::add_sidebars_to_widgets_area' );
 add_action( 'wp_ajax_fetch_search_results' , 'WSU_WP_Lodge_Child_Endpoints::fetch_search_results' );

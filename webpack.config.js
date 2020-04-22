@@ -11,11 +11,12 @@ module.exports = env => {
 	return {
 		context: __dirname,
 		entry: {
-			scripts: './assets/src/index.js'
+			childScripts: './assets/src/index.js',
+			adminScripts: './assets/src/admin.js'
 		},
 		output: {
 			path: path.resolve(__dirname, './assets/dist'),
-			filename: 'child-scripts.js'
+			filename: 'ascent-aero.[name].bundle.js'
 		},
 		mode: DEV ? 'development' : 'production',
 		devtool: DEV ? 'inline-source-map' : 'source-map',
@@ -84,7 +85,7 @@ module.exports = env => {
 		},
 		plugins: [
 			new MiniCssExtractPlugin({
-				filename: 'child-main.css'
+				filename: 'ascent-aero.childStyles.bundle.css'
 			}),
 			new LiveReloadPlugin(),
 		]
